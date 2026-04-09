@@ -82,7 +82,7 @@ export default function ContactPage() {
               onClick={openCalendly}
               className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-emerald-200 transition hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
             >
-              Book a Free Strategy Call
+              Book a 15-min AI & Career Strategy Call
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </button>
 
@@ -123,19 +123,20 @@ export default function ContactPage() {
 
       <section className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-24">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+          {/* Left side */}
           <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
             <p className="mb-4 text-sm sm:text-base font-semibold text-emerald-600">
               Get in touch
             </p>
 
             <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-gray-900">
-              Reach me directly or send a message below.
+              Reach me directly or book a call.
             </h2>
 
             <p className="mt-6 max-w-2xl text-base sm:text-lg leading-8 text-gray-700">
-              I&apos;m currently open to conversations around product, AI,
-              startup ideas, mentorship, and practical collaboration
-              opportunities.
+              If you already know you want guidance, the fastest route is to book
+              a strategy call. If you&apos;re not ready yet, you can send a
+              message and I&apos;ll get back to you.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -179,15 +180,15 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 transition hover:border-emerald-300 hover:bg-emerald-50/30 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >
-<div className="inline-flex rounded-xl bg-white p-3 text-emerald-600 shadow-sm">
-  <svg
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    className="h-5 w-5 fill-current"
-  >
-    <path d="M4.98 3.5a2.48 2.48 0 1 0 0 4.96 2.48 2.48 0 0 0 0-4.96ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1.01 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21h-4V9Z" />
-  </svg>
-</div>
+                <div className="inline-flex rounded-xl bg-white p-3 text-emerald-600 shadow-sm">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-5 w-5 fill-current"
+                  >
+                    <path d="M4.98 3.5a2.48 2.48 0 1 0 0 4.96 2.48 2.48 0 0 0 0-4.96ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1.01 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13V21h-4v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95V21h-4V9Z" />
+                  </svg>
+                </div>
                 <div>
                   <p className="text-sm sm:text-base font-semibold text-gray-900">
                     LinkedIn
@@ -218,18 +219,19 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/* Right side */}
           <div className="rounded-3xl border border-gray-100 bg-gradient-to-br from-white to-gray-50 p-6 shadow-sm sm:p-8 md:p-10">
             <p className="mb-4 text-sm sm:text-base font-semibold text-emerald-600">
-              Send a message
+              Prefer to send a message first?
             </p>
 
             <h2 className="text-2xl sm:text-3xl font-bold leading-tight text-gray-900">
-              Tell me what you&apos;d like to discuss.
+              Share a little context and I&apos;ll respond within 24 hours.
             </h2>
 
             <p className="mt-4 text-base sm:text-lg leading-8 text-gray-700">
-              This form is a contact UI for now. Later, you can connect it to
-              Formspree, Resend, or your own backend.
+              This form is for people who are not ready to book a call yet but
+              still want to reach out with something specific.
             </p>
 
             <form className="mt-8 space-y-5">
@@ -244,7 +246,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Your name"
+                  placeholder="Your full name"
                   className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                 />
               </div>
@@ -270,7 +272,7 @@ export default function ContactPage() {
                   htmlFor="topic"
                   className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
                 >
-                  What is this about?
+                  What are you looking for help with?
                 </label>
                 <select
                   id="topic"
@@ -281,11 +283,44 @@ export default function ContactPage() {
                   <option value="" disabled>
                     Select a topic
                   </option>
-                  <option value="product">Product & collaboration</option>
-                  <option value="mentorship">Mentorship & coaching</option>
-                  <option value="ai">AI opportunity</option>
+                  <option value="product">Product strategy or collaboration</option>
+                  <option value="mentorship">Mentorship or career guidance</option>
+                  <option value="ai">AI product or AI opportunity</option>
+                  <option value="startup">Startup or founder support</option>
                   <option value="general">General enquiry</option>
                 </select>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="currentSituation"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  Your current situation
+                </label>
+                <textarea
+                  id="currentSituation"
+                  name="currentSituation"
+                  rows={4}
+                  placeholder="Give me a little context on where you are right now."
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="outcome"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  What outcome are you hoping for?
+                </label>
+                <textarea
+                  id="outcome"
+                  name="outcome"
+                  rows={4}
+                  placeholder="Tell me what you want help achieving."
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                />
               </div>
 
               <div>
@@ -293,15 +328,22 @@ export default function ContactPage() {
                   htmlFor="message"
                   className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
                 >
-                  Message
+                  Anything else I should know?
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={6}
-                  placeholder="Tell me a little about what you need..."
+                  rows={4}
+                  placeholder="Optional, but helpful."
                   className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                 />
+              </div>
+
+              <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-4">
+                <p className="text-sm sm:text-base leading-7 text-gray-700">
+                  If your request is time-sensitive or you want faster feedback,
+                  booking a strategy call is usually the best option.
+                </p>
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -309,7 +351,7 @@ export default function ContactPage() {
                   type="submit"
                   className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-emerald-200 transition hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                 >
-                  Send message
+                  Send enquiry
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button>
 
