@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import {
   Mail,
   ArrowRight,
@@ -39,6 +40,12 @@ type CalendlyWindow = Window & {
 };
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState<
+    null | "success" | "error"
+  >(null);
+  const [statusMessage, setStatusMessage] = useState("");
+
   const openCalendly = () => {
     const calendly = (window as CalendlyWindow).Calendly;
 
@@ -52,6 +59,54 @@ export default function ContactPage() {
         "_blank",
         "noopener,noreferrer"
       );
+    }
+  };
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+    setFormStatus(null);
+    setStatusMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      topic: formData.get("topic"),
+      currentSituation: formData.get("currentSituation"),
+      outcome: formData.get("outcome"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setFormStatus("success");
+        setStatusMessage("Your message has been sent successfully.");
+        form.reset();
+      } else {
+        setFormStatus("error");
+        setStatusMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setFormStatus("error");
+      setStatusMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -233,37 +288,165 @@ export default function ContactPage() {
               This form is for people who are not ready to book a call yet but
               still want to reach out with something specific.
             </p>
-<form
-  className="mt-8 space-y-5"
-  onSubmit={async (e) => {
-    e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
+            <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  Full name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your full name"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  required
+                />
+              </div>
 
-    const payload = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      topic: formData.get("topic"),
-      currentSituation: formData.get("currentSituation"),
-      outcome: formData.get("outcome"),
-      message: formData.get("message"),
-    };
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  Email address
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  required
+                />
+              </div>
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(payload),
-    });
+              <div>
+                <label
+                  htmlFor="topic"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  What are you looking for help with?
+                </label>
+                <select
+                  id="topic"
+                  name="topic"
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  defaultValue=""
+                  required
+                >
+                  <option value="" disabled>
+                    Select a topic
+                  </option>
+                  <option value="Product strategy or collaboration">
+                    Product strategy or collaboration
+                  </option>
+                  <option value="Mentorship or career guidance">
+                    Mentorship or career guidance
+                  </option>
+                  <option value="AI product or AI opportunity">
+                    AI product or AI opportunity
+                  </option>
+                  <option value="Startup or founder support">
+                    Startup or founder support
+                  </option>
+                  <option value="General enquiry">General enquiry</option>
+                </select>
+              </div>
 
-    const data = await res.json();
+              <div>
+                <label
+                  htmlFor="currentSituation"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  Your current situation
+                </label>
+                <textarea
+                  id="currentSituation"
+                  name="currentSituation"
+                  rows={4}
+                  placeholder="Give me a little context on where you are right now."
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  required
+                />
+              </div>
 
-    if (data.success) {
-      alert("Message sent successfully!");
-      e.currentTarget.reset();
-    } else {
-      alert("Something went wrong. Try again.");
-    }
-  }}
-></form>
+              <div>
+                <label
+                  htmlFor="outcome"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  What outcome are you hoping for?
+                </label>
+                <textarea
+                  id="outcome"
+                  name="outcome"
+                  rows={4}
+                  placeholder="Tell me what you want help achieving."
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm sm:text-base font-medium text-gray-900"
+                >
+                  Anything else I should know?
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  placeholder="Optional, but helpful."
+                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                />
+              </div>
+
+              <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-4">
+                <p className="text-sm sm:text-base leading-7 text-gray-700">
+                  If your request is time-sensitive or you want faster feedback,
+                  booking a strategy call is usually the best option.
+                </p>
+              </div>
+
+              {formStatus && (
+                <div
+                  className={`rounded-2xl px-4 py-4 text-sm sm:text-base ${
+                    formStatus === "success"
+                      ? "border border-emerald-200 bg-emerald-50 text-emerald-800"
+                      : "border border-red-200 bg-red-50 text-red-800"
+                  }`}
+                >
+                  {statusMessage}
+                </div>
+              )}
+
+              <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-emerald-200 transition hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  {isSubmitting ? "Sending..." : "Send enquiry"}
+                  {!isSubmitting && (
+                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  )}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={openCalendly}
+                  className="inline-flex items-center justify-center rounded-2xl border-2 border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50/40 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                >
+                  Book a 15-min AI & Career Strategy Call
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>

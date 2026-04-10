@@ -6,7 +6,14 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, topic, currentSituation, outcome, message } = body;
+    const {
+      name = "",
+      email = "",
+      topic = "",
+      currentSituation = "",
+      outcome = "",
+      message = "",
+    } = body;
 
     const data = await resend.emails.send({
       from: "Collins Portfolio <onboarding@resend.dev>",
@@ -23,18 +30,22 @@ export async function POST(req: Request) {
         <hr/>
 
         <p><strong>Current Situation:</strong></p>
-        <p>${currentSituation}</p>
+        <p>${currentSituation || "Not provided"}</p>
 
         <p><strong>Desired Outcome:</strong></p>
-        <p>${outcome}</p>
+        <p>${outcome || "Not provided"}</p>
 
         <p><strong>Additional Info:</strong></p>
-        <p>${message}</p>
+        <p>${message || "Not provided"}</p>
       `,
     });
 
-    return Response.json({ success: true, data });
+    return Response.json({ success: true, data }, { status: 200 });
   } catch (error) {
-    return Response.json({ success: false, error });
+    console.error("Contact form error:", error);
+    return Response.json(
+      { success: false, error: "Failed to send message." },
+      { status: 500 }
+    );
   }
 }
