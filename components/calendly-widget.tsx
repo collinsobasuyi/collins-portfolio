@@ -39,7 +39,7 @@ export default function CalendlyWidget() {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
           url: "https://calendly.com/collins-product-ai/15min?hide_event_type_details=1&text_color=111827&primary_color=0d896c",
-          text: "Book a 15-min Strategy Call",
+          text: "Book a 15-min Strategy Call Today",
           color: "#0d896c",
           textColor: "#ffffff",
           branding: true,
