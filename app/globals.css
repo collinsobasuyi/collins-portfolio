@@ -23,18 +23,26 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-    /* background: #ffffff;
+  /* background: #ffffff;
   color: #111827; */
 }
 
 /* Custom smooth scrolling */
 html {
   scroll-behavior: smooth;
+  /* Prevents layout shift when scrollbar disappears (mobile menu) */
+  scrollbar-gutter: stable;
+}
+
+.calendly-badge-widget { 
+left: 50% !important; 
+margin-left: -100px!important; 
 }
 
 /* Better touch targets on mobile */
 @media (max-width: 640px) {
-  button, a {
+  button, 
+  a {
     min-height: 44px;
   }
 }
@@ -42,4 +50,29 @@ html {
 /* Prevent body scroll when mobile menu is open */
 body.menu-open {
   overflow: hidden;
+}
+
+/* Smooth focus transitions for better UX */
+*:focus-visible {
+  outline: none;
+  transition: box-shadow 0.15s ease;
+}
+
+/* Accessibility: Respect user's motion preferences (WCAG 2.2) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optional: Better scrolling experience on iOS */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
