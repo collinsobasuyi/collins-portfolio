@@ -8,7 +8,12 @@ const projects = [
       "AI-powered mental health platform focused on emotionally intelligent support and accessible care.",
     role: "Founder / Product Lead",
     stage: "MVP in progress",
+    status: "In Progress",
     focus: "Mental health AI",
+    audience:
+      "People looking for more accessible, emotionally supportive digital mental health experiences.",
+    whyItMatters:
+      "Designed to make mental health support feel more human, structured, and accessible.",
     icon: Sparkles,
     gradient: "from-amber-500 to-orange-500",
     problem:
@@ -29,7 +34,12 @@ const projects = [
       "Governance and compliance-focused AI platform helping organisations assess AI risk and readiness.",
     role: "Founder / Product Lead",
     stage: "Discovery",
+    status: "Discovery",
     focus: "AI governance and compliance",
+    audience:
+      "Organisations adopting AI that need clearer governance, risk visibility, and responsible deployment structure.",
+    whyItMatters:
+      "Built to reduce uncertainty around AI adoption and support more responsible decision-making.",
     icon: Shield,
     gradient: "from-blue-500 to-indigo-500",
     problem:
@@ -50,7 +60,12 @@ const projects = [
       "AI product studio exploring practical tools, startup ideas, and real-world digital solutions.",
     role: "Founder",
     stage: "Active exploration",
+    status: "Active",
     focus: "Product studio and AI experimentation",
+    audience:
+      "Early-stage product ideas, experiments, and digital opportunities that need structure, momentum, and practical execution.",
+    whyItMatters:
+      "Created to move promising ideas out of concept stage and into real exploration and execution.",
     icon: Layers3,
     gradient: "from-emerald-500 to-teal-500",
     problem:
@@ -70,31 +85,29 @@ const projects = [
 export default function WorkPage() {
   return (
     <>
-      {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white" />
         <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-emerald-50/40 to-teal-50/40 blur-3xl" />
 
-        <div className="relative max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
-          <p className="text-sm sm:text-base font-semibold tracking-wide text-emerald-600 mb-4">
+        <div className="relative mx-auto max-w-[90rem] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8">
+          <p className="mb-4 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
             My Work
           </p>
 
-          <h1 className="max-w-5xl text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-gray-900">
-            Real products, active ideas, and practical work across AI, product,
-            and delivery.
+          <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            Products, ventures, and practical work across AI, product strategy,
+            and execution.
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg sm:text-xl leading-8 text-gray-700">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700 sm:text-xl">
             This page highlights the products and initiatives I’m currently
             building and exploring. My focus is on turning ideas into structured,
-            useful, and real-world digital solutions.
+            useful, and real-world digital solutions with clarity and momentum.
           </p>
         </div>
       </section>
 
-      {/* Project sections */}
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-24">
+      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
         <div className="space-y-10">
           {projects.map((project) => (
             <article
@@ -114,26 +127,37 @@ export default function WorkPage() {
                       <project.icon className="h-6 w-6" />
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                      {project.title}
-                    </h2>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                        {project.title}
+                      </h2>
+                      <span
+                        className={`inline-flex w-fit rounded-full bg-gradient-to-r ${project.gradient} px-3 py-1.5 text-sm font-medium text-white shadow-sm`}
+                      >
+                        {project.status}
+                      </span>
+                    </div>
 
-                    <p className="mt-4 text-base sm:text-lg leading-8 text-gray-700">
+                    <p className="mt-4 text-base leading-8 text-gray-700 sm:text-lg">
                       {project.subtitle}
+                    </p>
+
+                    <p className="mt-4 text-sm font-medium text-emerald-700 sm:text-base">
+                      {project.whyItMatters}
                     </p>
                   </div>
 
                   <div className="w-full max-w-sm rounded-2xl border border-gray-100 bg-gray-50 p-5 sm:p-6">
                     <div className="space-y-3">
-                      <p className="text-sm sm:text-base text-gray-700">
+                      <p className="text-sm text-gray-700 sm:text-base">
                         <span className="font-semibold text-gray-900">Role:</span>{" "}
                         {project.role}
                       </p>
-                      <p className="text-sm sm:text-base text-gray-700">
+                      <p className="text-sm text-gray-700 sm:text-base">
                         <span className="font-semibold text-gray-900">Stage:</span>{" "}
                         {project.stage}
                       </p>
-                      <p className="text-sm sm:text-base text-gray-700">
+                      <p className="text-sm text-gray-700 sm:text-base">
                         <span className="font-semibold text-gray-900">Focus:</span>{" "}
                         {project.focus}
                       </p>
@@ -141,37 +165,46 @@ export default function WorkPage() {
                   </div>
                 </div>
 
-                <div className="mt-10 grid gap-8 lg:grid-cols-3">
+                <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6">
+                  <p className="mb-3 text-sm font-semibold text-emerald-600 sm:text-base">
+                    Who It’s For
+                  </p>
+                  <p className="text-base leading-8 text-gray-700 sm:text-lg">
+                    {project.audience}
+                  </p>
+                </div>
+
+                <div className="mt-8 grid gap-8 lg:grid-cols-3">
                   <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
-                    <p className="text-sm sm:text-base font-semibold text-emerald-600 mb-3">
+                    <p className="mb-3 text-sm font-semibold text-emerald-600 sm:text-base">
                       Problem
                     </p>
-                    <p className="text-base sm:text-lg leading-8 text-gray-700">
+                    <p className="text-base leading-8 text-gray-700 sm:text-lg">
                       {project.problem}
                     </p>
                   </div>
 
                   <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
-                    <p className="text-sm sm:text-base font-semibold text-emerald-600 mb-3">
+                    <p className="mb-3 text-sm font-semibold text-emerald-600 sm:text-base">
                       Solution
                     </p>
-                    <p className="text-base sm:text-lg leading-8 text-gray-700">
+                    <p className="text-base leading-8 text-gray-700 sm:text-lg">
                       {project.solution}
                     </p>
                   </div>
 
                   <div className="rounded-2xl border border-gray-100 bg-gray-50 p-6">
-                    <p className="text-sm sm:text-base font-semibold text-emerald-600 mb-3">
+                    <p className="mb-3 text-sm font-semibold text-emerald-600 sm:text-base">
                       Approach
                     </p>
-                    <p className="text-base sm:text-lg leading-8 text-gray-700">
+                    <p className="text-base leading-8 text-gray-700 sm:text-lg">
                       {project.approach}
                     </p>
                   </div>
                 </div>
 
                 <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6">
-                  <p className="text-sm sm:text-base font-semibold text-emerald-600 mb-4">
+                  <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
                     Current Focus
                   </p>
 
@@ -181,7 +214,7 @@ export default function WorkPage() {
                         key={item}
                         className="rounded-xl border border-gray-100 bg-gray-50 px-4 py-4"
                       >
-                        <p className="text-sm sm:text-base leading-7 text-gray-700">
+                        <p className="text-sm leading-7 text-gray-700 sm:text-base">
                           {item}
                         </p>
                       </div>
@@ -194,8 +227,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Closing CTA */}
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-24">
+      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-700 px-8 py-12 text-white shadow-2xl sm:px-10 md:px-12 md:py-16">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-white blur-3xl" />
@@ -203,23 +235,24 @@ export default function WorkPage() {
           </div>
 
           <div className="relative text-center">
-            <p className="mb-4 text-sm sm:text-base font-semibold tracking-wide text-white/85">
+            <p className="mb-4 text-sm font-semibold tracking-wide text-white/85 sm:text-base">
               Interested in building something similar?
             </p>
 
-            <h2 className="mx-auto max-w-3xl text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               Let’s talk about product, AI, and execution.
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-8 text-white/90">
-              I’m open to collaboration, product conversations, early-stage ideas,
-              and opportunities where practical thinking and real delivery matter.
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+              I’m open to collaboration, product conversations, early-stage
+              ideas, and opportunities where practical thinking and real
+              delivery matter.
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-5 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 text-base font-medium text-emerald-700 transition hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-700"
+                className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 text-base font-medium text-emerald-700 transition hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-700"
               >
                 Start a Conversation
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -227,7 +260,7 @@ export default function WorkPage() {
 
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-2xl border-2 border-white/30 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-700"
+                className="inline-flex items-center justify-center rounded-2xl border-2 border-white/30 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-700"
               >
                 Learn more about me
               </Link>
