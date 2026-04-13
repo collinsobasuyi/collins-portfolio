@@ -136,7 +136,9 @@ export default function SiteHeader() {
       </a>
 
       <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
-        <div className="flex min-h-[72px] items-center justify-between">
+        <div className="relative flex min-h-[72px] items-center justify-between">
+
+          {/* Logo — left */}
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
@@ -147,19 +149,19 @@ export default function SiteHeader() {
             <span className="sr-only">, home</span>
           </Link>
 
+          {/* Nav — centered absolutely */}
           <nav
-            className="hidden items-center gap-6 md:flex lg:gap-8"
+            className="pointer-events-none absolute inset-x-0 hidden justify-center gap-6 md:flex lg:gap-10"
             aria-label="Main navigation"
           >
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.href);
-
               return (
                 <Link
                   key={item.name}
                   href={item.href}
                   aria-current={active ? "page" : undefined}
-                  className={`rounded-md text-base font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 lg:text-lg ${
+                  className={`pointer-events-auto rounded-md text-base font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 lg:text-lg ${
                     active
                       ? "text-[#0D896C]"
                       : "text-gray-700 hover:text-[#0D896C]"
@@ -177,31 +179,35 @@ export default function SiteHeader() {
                 </Link>
               );
             })}
+          </nav>
 
+          {/* Right — CTA (desktop) + hamburger (mobile) */}
+          <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-xl bg-[#0D896C] px-5 py-3 text-base font-medium text-white transition-all hover:scale-105 hover:bg-[#0B6F56] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 active:scale-95 lg:text-lg"
+              className="hidden items-center rounded-xl bg-[#0D896C] px-5 py-3 text-base font-medium text-white transition-all hover:scale-105 hover:bg-[#0B6F56] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 active:scale-95 md:inline-flex lg:text-lg"
               aria-current={pathname === "/contact" ? "page" : undefined}
             >
               Let&apos;s Connect
             </Link>
-          </nav>
 
-          <button
-            ref={menuButtonRef}
-            type="button"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-900 transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 md:hidden"
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
+            <button
+              ref={menuButtonRef}
+              type="button"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-900 transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 md:hidden"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+
         </div>
       </div>
 

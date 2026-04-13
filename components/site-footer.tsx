@@ -97,12 +97,8 @@ export default function SiteFooter() {
             </Link>
 
             <p className="mt-3 text-base leading-relaxed text-gray-600">
-              Product, AI, quality engineering, and mentorship.
-            </p>
-
-            <p className="mt-3 text-base leading-relaxed text-gray-600">
-              I build practical digital products, support ambitious ideas, and
-              help people move from clarity to execution.
+              AI product strategy, delivery leadership, and mentorship — for
+              founders, teams, and ambitious professionals.
             </p>
 
             <div className="mt-6 flex gap-4 lg:hidden">

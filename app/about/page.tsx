@@ -16,6 +16,16 @@ import {
   Workflow,
 } from "lucide-react";
 
+const clients = [
+  "Bank of America",
+  "Bloomberg",
+  "Amazon",
+  "HMRC",
+  "Public Health England",
+  "Bionic",
+  "PPL",
+];
+
 const strengths = [
   {
     title: "Product Leadership",
@@ -38,8 +48,9 @@ const strengths = [
   {
     title: "Mentorship & Growth",
     description:
-      "I also support ambitious professionals in tech who want stronger positioning, clearer direction, and practical guidance for growth.",
+      "I mentor professionals in QA, Business Analysis, and Product Management — helping them reposition, grow with confidence, and find clearer direction.",
     icon: Users,
+    accent: "violet",
   },
 ];
 
@@ -48,12 +59,11 @@ const experienceAreas = [
   "Product Management",
   "Delivery Leadership",
   "Quality Engineering",
-  "Technical Quality",
-  "Complex Systems",
-  "Finance",
+  "Finance & Banking",
   "Insurance",
   "Public Health",
-  "Regulated Environments",
+  "Government & Regulated",
+  "Media & Publishing",
 ];
 
 const principles = [
@@ -135,81 +145,83 @@ const capabilities = [
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white" />
-        <div className="absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-gradient-to-br from-emerald-50/40 to-teal-50/40 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[380px] w-[380px] rounded-full bg-gradient-to-tr from-violet-50/20 to-indigo-50/20 blur-3xl" />
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden bg-gray-950">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950" />
+        <div className="absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-emerald-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-[380px] w-[380px] rounded-full bg-violet-500/5 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[90rem] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8">
-          <div className="inline-flex items-center rounded-full border border-emerald-200/60 bg-white/90 px-5 py-2.5 text-sm font-medium text-emerald-700 shadow-sm sm:text-base">
+        <div className="relative mx-auto max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8">
+          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-emerald-400 sm:text-base">
             About Me
           </div>
 
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
             <div>
-              <p className="mb-4 text-base font-medium tracking-wide text-gray-600 sm:text-lg">
-                AI Product Leader • Founder • Mentor
+              <p className="mb-4 text-base font-medium tracking-wide text-gray-400 sm:text-lg">
+                AI Product Leader · Founder · Mentor
               </p>
 
-              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
                 I work at the intersection of product, execution, technical
                 quality, and AI.
               </h1>
 
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700 sm:text-xl">
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
                 With 15+ years of experience across product, delivery, and
                 quality engineering, I bring a practical, systems-minded
                 approach to building digital products that are clear, reliable,
                 and worth using.
               </p>
 
-              <p className="mt-5 max-w-3xl text-base leading-8 text-gray-700 sm:text-lg">
-                Today, my work sits across AI product strategy, venture building,
+              <p className="mt-5 max-w-3xl text-base leading-8 text-gray-400 sm:text-lg">
+                Today, my work spans AI product strategy, venture building,
                 technical leadership, and mentorship for professionals who want
                 to grow with more clarity and confidence.
               </p>
             </div>
 
-            <div className="rounded-3xl border border-gray-200 bg-white/90 p-6 shadow-xl backdrop-blur-sm sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600 sm:text-base">
+            {/* Snapshot card */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 sm:text-base">
                 Snapshot
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-gray-100 bg-white p-5 text-center">
-                  <p className="text-3xl font-bold text-emerald-600 sm:text-4xl">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+                  <p className="text-3xl font-bold text-emerald-400 sm:text-4xl">
                     15+
                   </p>
-                  <p className="mt-1 text-sm text-gray-600">Years Experience</p>
+                  <p className="mt-1 text-sm text-gray-400">Years Experience</p>
                 </div>
 
-                <div className="rounded-2xl border border-gray-100 bg-white p-5 text-center">
-                  <p className="text-3xl font-bold text-emerald-600 sm:text-4xl">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+                  <p className="text-3xl font-bold text-emerald-400 sm:text-4xl">
                     AI
                   </p>
-                  <p className="mt-1 text-sm text-gray-600">Product Focus</p>
+                  <p className="mt-1 text-sm text-gray-400">Product Focus</p>
                 </div>
 
-                <div className="rounded-2xl border border-gray-100 bg-white p-5 text-center">
-                  <p className="text-3xl font-bold text-emerald-600 sm:text-4xl">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+                  <p className="text-3xl font-bold text-emerald-400 sm:text-4xl">
                     3
                   </p>
-                  <p className="mt-1 text-sm text-gray-600">Active Ventures</p>
+                  <p className="mt-1 text-sm text-gray-400">Active Ventures</p>
                 </div>
 
-                <div className="rounded-2xl border border-gray-100 bg-white p-5 text-center">
-                  <p className="text-3xl font-bold text-emerald-600 sm:text-4xl">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+                  <p className="text-3xl font-bold text-emerald-400 sm:text-4xl">
                     UK
                   </p>
-                  <p className="mt-1 text-sm text-gray-600">Based</p>
+                  <p className="mt-1 text-sm text-gray-400">Based</p>
                 </div>
               </div>
 
-              <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50/70 p-5">
-                <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+              <div className="mt-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-5">
+                <p className="text-sm font-semibold uppercase tracking-wide text-emerald-400">
                   Best fit
                 </p>
-                <p className="mt-2 text-base leading-7 text-gray-700">
+                <p className="mt-2 text-base leading-7 text-gray-300">
                   Founders, teams, and ambitious professionals who want better
                   product direction, stronger execution, and grounded support.
                 </p>
@@ -219,7 +231,27 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
+      {/* ── Client strip ── */}
+      <section className="border-b border-gray-100 bg-gray-50">
+        <div className="mx-auto max-w-[90rem] px-4 py-10 sm:px-6 lg:px-8">
+          <p className="mb-6 text-sm font-semibold uppercase tracking-widest text-gray-400">
+            Contracted &amp; delivered for
+          </p>
+          <div className="flex flex-wrap gap-x-8 gap-y-3">
+            {clients.map((name) => (
+              <span
+                key={name}
+                className="text-base font-semibold text-gray-500 transition hover:text-gray-700 sm:text-lg"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Journey + Experience ── */}
+      <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
             <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
@@ -228,7 +260,7 @@ export default function AboutPage() {
 
             <div className="space-y-6 text-base leading-8 text-gray-700 sm:text-lg">
               <p>
-                Over the years, I’ve worked across complex products and systems
+                Over the years, I&apos;ve worked across complex products and systems
                 where quality, clarity, and execution genuinely matter. My
                 background spans product management, delivery leadership, and
                 quality engineering, which gives me a broader and more grounded
@@ -236,7 +268,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                I’m especially drawn to the space between strategy and
+                I&apos;m especially drawn to the space between strategy and
                 execution. I enjoy taking ideas that feel messy or ambitious and
                 shaping them into something more structured, practical, and
                 useful. That has become one of the defining themes of how I
@@ -251,11 +283,11 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Today, I’m focused on AI products, venture building, and
+                Today, I&apos;m focused on AI products, venture building, and
                 practical digital tools that solve meaningful problems. Alongside
-                that, I mentor professionals in tech who want stronger
-                positioning, clearer direction, and more confidence in how they
-                grow.
+                that, I mentor professionals in tech — in QA, business analysis,
+                and product — who want stronger positioning, clearer direction,
+                and more confidence in how they grow.
               </p>
             </div>
           </div>
@@ -263,7 +295,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="rounded-3xl border border-gray-100 bg-gray-50 p-6 sm:p-8 md:p-10">
               <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
-                Selected Experience
+                Industry Experience
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -280,7 +312,7 @@ export default function AboutPage() {
 
             <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
               <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
-                How I Tend To Work
+                Working Principles
               </p>
 
               <div className="space-y-3">
@@ -299,9 +331,56 @@ export default function AboutPage() {
         </div>
       </section>
 
-    
+      {/* ── What I Bring ── */}
+      <section className="bg-gray-50">
+        <div className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="mb-10">
+            <p className="mb-3 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
+              What I Bring
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Leadership, depth, and execution in one place
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg">
+              A mix of product thinking, technical grounding, delivery discipline,
+              and practical support for people and teams trying to grow.
+            </p>
+          </div>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {strengths.map((item) => {
+              const isViolet = item.accent === "violet";
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div
+                    className={`mb-4 inline-flex rounded-xl p-3 ${
+                      isViolet
+                        ? "bg-violet-50 text-violet-600"
+                        : "bg-emerald-50 text-emerald-600"
+                    }`}
+                  >
+                    <item.icon className="h-6 w-6" />
+                  </div>
+
+                  <h3 className="mb-3 text-xl font-bold text-gray-900">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-base leading-8 text-gray-700">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Technical Depth ── */}
+      <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="mb-10">
           <p className="mb-3 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
             Technical Depth
@@ -345,83 +424,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-        <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
-        <div className="mb-10">
-          <p className="mb-3 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
-            How I Work
-          </p>
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            What I bring to the table
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg">
-            A mix of leadership, technical depth, execution discipline, and a
-            practical mindset for building things that genuinely work.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {strengths.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="mb-4 inline-flex rounded-xl bg-emerald-50 p-3 text-emerald-600">
-                <item.icon className="h-6 w-6" />
-              </div>
-
-              <h3 className="mb-3 text-xl font-bold text-gray-900">
-                {item.title}
-              </h3>
-
-              <p className="text-base leading-8 text-gray-700">
-                {item.description}
-              </p>
+      {/* ── Current Focus CTA ── */}
+      <section className="bg-gray-950">
+        <div className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-4xl">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-emerald-400">
+              <Sparkles className="h-4 w-4" />
+              Current Focus
             </div>
-          ))}
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50" />
-          <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-emerald-100/40 blur-3xl" />
+            <h2 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl">
+              Building products, refining ideas, and creating more clarity
+              where AI, product, and execution meet.
+            </h2>
 
-          <div className="relative rounded-3xl border border-gray-100 p-8 shadow-sm sm:p-10 md:p-12">
-            <div className="max-w-4xl">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
-                <Sparkles className="h-4 w-4" />
-                Current Focus
-              </div>
+            <p className="mt-6 max-w-3xl text-base leading-8 text-gray-400 sm:text-lg">
+              Right now, I&apos;m focused on building ventures like UBUNCARE and
+              RiskPilot AI, shaping YSLR Labs as a practical product studio,
+              and supporting people who want stronger direction in their
+              careers, projects, and next steps. I&apos;m drawn to work that
+              combines ambition with substance.
+            </p>
 
-              <h2 className="max-w-3xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
-                Building products, refining ideas, and creating more clarity
-                where AI, product, and execution meet.
-              </h2>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/work"
+                className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0D896C] px-8 py-4 text-base font-medium text-white shadow-lg transition hover:bg-[#0B6F56] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+              >
+                Explore My Work
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
 
-              <p className="mt-6 max-w-3xl text-base leading-8 text-gray-700 sm:text-lg">
-                Right now, I’m focused on building ventures like UBUNCARE and
-                RiskPilot AI, shaping YSLR Labs as a practical product studio,
-                and supporting people who want stronger direction in their
-                careers, projects, and next steps. I’m drawn to work that
-                combines ambition with substance.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-                <Link
-                  href="/work"
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 text-base font-medium text-white shadow-lg shadow-emerald-200 transition hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                >
-                  Explore My Work
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-2xl border-2 border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                >
-                  Let&apos;s Connect
-                </Link>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+              >
+                Let&apos;s Connect
+              </Link>
             </div>
           </div>
         </div>

@@ -80,31 +80,33 @@ const sessionFormats = [
     description:
       "Targeted help with how you present yourself, how you prepare, and how you communicate your value more clearly.",
     icon: FileText,
-    details: ["CV reviews", "Interview prep", "LinkedIn/profile positioning", "Confidence building"],
+    details: ["CV reviews", "Interview prep", "LinkedIn / profile positioning", "Confidence building"],
   },
 ];
 
 export default function MentorshipPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white" />
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-emerald-50/40 to-teal-50/40 blur-3xl" />
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden bg-gray-950">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950" />
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-violet-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-[360px] w-[360px] rounded-full bg-indigo-500/5 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[90rem] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8">
+        <div className="relative mx-auto max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700 sm:text-base">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-violet-400 sm:text-base">
                 <Users className="h-4 w-4" />
                 Mentorship for Tech Professionals
               </div>
 
-              <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
                 Helping ambitious professionals grow with more clarity,
                 confidence, and direction.
               </h1>
 
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700 sm:text-xl">
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
                 I support professionals across product, QA, AI, Agile, and broader
                 tech roles who want practical guidance, stronger positioning, and a
                 clearer sense of what their next step should be.
@@ -115,19 +117,20 @@ export default function MentorshipPage() {
 
                 <Link
                   href="/work"
-                  className="inline-flex items-center justify-center rounded-2xl border border-gray-300 bg-white px-6 py-4 text-base font-medium text-gray-900 transition hover:border-[#0D896C] hover:bg-[#0D896C]/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
                 >
                   View My Work
                 </Link>
               </div>
 
-              <p className="mt-5 text-sm text-gray-600 sm:text-base">
+              <p className="mt-5 text-sm text-gray-500 sm:text-base">
                 A practical first conversation to understand where you are and how I can help.
               </p>
             </div>
 
-            <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-gray-600 sm:text-base">
+            {/* Who this is for */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-wide text-gray-400 sm:text-base">
                 Who this is for
               </p>
 
@@ -135,9 +138,9 @@ export default function MentorshipPage() {
                 {audience.map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-gray-100 bg-white px-4 py-4"
+                    className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4"
                   >
-                    <p className="text-base leading-8 text-gray-700 sm:text-lg">
+                    <p className="text-base leading-7 text-gray-300 sm:text-lg">
                       {item}
                     </p>
                   </div>
@@ -148,9 +151,10 @@ export default function MentorshipPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24 lg:px-8">
-        <div className="mb-8">
-          <p className="mb-2 text-sm font-medium text-[#0D896C] sm:text-base">
+      {/* ── Mentorship Areas ── */}
+      <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mb-10">
+          <p className="mb-3 text-sm font-semibold tracking-wide text-violet-600 sm:text-base">
             How I Can Help
           </p>
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -166,9 +170,9 @@ export default function MentorshipPage() {
           {offerings.map((offering) => (
             <div
               key={offering.title}
-              className="rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-[#0D896C]/30 hover:shadow-lg sm:p-7"
+              className="rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-violet-200 hover:shadow-lg sm:p-7"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 text-white">
+              <div className="mb-4 inline-flex rounded-xl bg-violet-50 p-3 text-violet-600">
                 <offering.icon className="h-6 w-6" />
               </div>
 
@@ -184,7 +188,7 @@ export default function MentorshipPage() {
                 {offering.benefits.map((benefit) => (
                   <span
                     key={benefit}
-                    className="rounded-full bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700"
+                    className="rounded-full bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700"
                   >
                     {benefit}
                   </span>
@@ -195,14 +199,15 @@ export default function MentorshipPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24 lg:px-8">
-        <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
-          <div className="mb-8">
-            <p className="mb-2 text-sm font-medium text-[#0D896C] sm:text-base">
-              Who I’ve Helped
+      {/* ── Who I've Helped ── */}
+      <section className="bg-gray-50">
+        <div className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="mb-10">
+            <p className="mb-3 text-sm font-semibold tracking-wide text-violet-600 sm:text-base">
+              Who I&apos;ve Helped
             </p>
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              The kinds of professionals I’ve supported
+              The kinds of professionals I&apos;ve supported
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-gray-700 sm:text-lg">
               My mentoring work has supported people across different stages of
@@ -214,7 +219,7 @@ export default function MentorshipPage() {
             {helpedPeople.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border border-gray-100 bg-gray-50 px-4 py-4"
+                className="rounded-2xl border border-gray-100 bg-white px-4 py-4 shadow-sm"
               >
                 <p className="text-base leading-7 text-gray-700">{item}</p>
               </div>
@@ -223,9 +228,10 @@ export default function MentorshipPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24 lg:px-8">
-        <div className="mb-8">
-          <p className="mb-2 text-sm font-medium text-[#0D896C] sm:text-base">
+      {/* ── Session Formats ── */}
+      <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mb-10">
+          <p className="mb-3 text-sm font-semibold tracking-wide text-violet-600 sm:text-base">
             Session Formats
           </p>
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -237,9 +243,9 @@ export default function MentorshipPage() {
           {sessionFormats.map((format) => (
             <div
               key={format.title}
-              className="rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-[#0D896C]/30 hover:shadow-lg sm:p-7"
+              className="rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-violet-200 hover:shadow-lg sm:p-7"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 text-white">
+              <div className="mb-4 inline-flex rounded-xl bg-violet-50 p-3 text-violet-600">
                 <format.icon className="h-6 w-6" />
               </div>
 
@@ -255,7 +261,7 @@ export default function MentorshipPage() {
                 {format.details.map((detail) => (
                   <span
                     key={detail}
-                    className="rounded-full bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700"
+                    className="rounded-full bg-violet-50 px-3 py-1.5 text-sm font-medium text-violet-700"
                   >
                     {detail}
                   </span>
@@ -265,8 +271,8 @@ export default function MentorshipPage() {
           ))}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50/70 p-5">
-          <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
+        <div className="mt-6 rounded-2xl border border-violet-100 bg-violet-50/70 p-5">
+          <p className="text-sm font-semibold uppercase tracking-wide text-violet-700">
             Availability
           </p>
           <p className="mt-2 text-base leading-7 text-gray-700">
@@ -275,77 +281,81 @@ export default function MentorshipPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 sm:p-8 md:p-10">
-            <p className="mb-3 text-sm font-medium text-[#0D896C] sm:text-base">
-              My Approach
-            </p>
+      {/* ── Approach ── */}
+      <section className="bg-gray-50">
+        <div className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8 md:p-10">
+              <p className="mb-3 text-sm font-semibold text-violet-600 sm:text-base">
+                My Approach
+              </p>
 
-            <h2 className="max-w-3xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
-              Honest, practical, and tailored to where you are right now.
-            </h2>
+              <h2 className="max-w-3xl text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
+                Honest, practical, and tailored to where you are right now.
+              </h2>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-gray-700 sm:text-lg">
-              I focus on practical conversations, not vague motivation. The goal
-              is to help you get clearer about your next move, strengthen your
-              positioning, and move forward with more confidence and structure.
-            </p>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-gray-700 sm:text-lg">
+                I focus on practical conversations, not vague motivation. The goal
+                is to help you get clearer about your next move, strengthen your
+                positioning, and move forward with more confidence and structure.
+              </p>
 
-            <div className="mt-8">
-              <CalendlyButton label="Book Your Discovery Call" />
+              <div className="mt-8">
+                <CalendlyButton label="Book Your Discovery Call" />
+              </div>
             </div>
-          </div>
 
-          <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
-            <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
-              What you can expect
-            </p>
+            <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
+              <p className="mb-4 text-sm font-semibold text-violet-600 sm:text-base">
+                What you can expect
+              </p>
 
-            <div className="space-y-3">
-              {principles.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-4"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-600" />
-                  <p className="text-base text-gray-700">{item}</p>
-                </div>
-              ))}
+              <div className="space-y-3">
+                {principles.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-4"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-violet-600" />
+                    <p className="text-base text-gray-700">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-700 px-8 py-12 text-white shadow-2xl sm:px-10 md:px-12 md:py-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold tracking-wide text-white/85 sm:text-base">
+      {/* ── CTA ── */}
+      <section className="bg-gray-950">
+        <div className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="mb-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-violet-400">
               Limited mentoring availability
-            </p>
+            </div>
 
-            <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-              Book a session and let’s bring more clarity to your next move.
+            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+              Book a session and let&apos;s bring more clarity to your next move.
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
               Whether you need career direction, technical mentorship, interview support,
               or help thinking through your next leadership step, we can start with one practical conversation.
             </p>
 
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/75 sm:text-base">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-500 sm:text-base">
               I keep mentoring slots limited so I can give each person thoughtful, useful support. Pricing and format are shared after the first discovery conversation.
             </p>
 
-            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <CalendlyButton
                 label="Book a 15-min Strategy Call"
-                className="bg-white text-emerald-700 hover:bg-gray-100"
+                className="bg-white text-gray-900 hover:bg-gray-100"
               />
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl border-2 border-white/30 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-700"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
               >
                 Contact Me Instead
               </Link>

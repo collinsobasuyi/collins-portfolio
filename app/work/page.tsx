@@ -17,11 +17,11 @@ const projects = [
     icon: Sparkles,
     gradient: "from-amber-500 to-orange-500",
     problem:
-      "Many people struggle to access consistent, emotionally supportive mental health guidance. A lot of digital tools feel generic, impersonal, or disconnected from the user’s lived experience.",
+      "Many people struggle to access consistent, emotionally supportive mental health guidance. A lot of digital tools feel generic, impersonal, or disconnected from the user's lived experience.",
     solution:
       "UBUNCARE is being designed as an AI-powered mental health support platform that combines structured journeys, emotionally aware interaction, and a more accessible digital experience.",
     approach:
-      "I’m shaping the product strategy, user journey, and MVP direction, with a focus on trust, clarity, ethical support, and practical usability across web and app experiences.",
+      "I'm shaping the product strategy, user journey, and MVP direction, with a focus on trust, clarity, ethical support, and practical usability across web and app experiences.",
     currentFocus: [
       "Defining MVP scope and user flows",
       "Structuring onboarding and support journeys",
@@ -85,29 +85,32 @@ const projects = [
 export default function WorkPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white" />
-        <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-emerald-50/40 to-teal-50/40 blur-3xl" />
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden bg-gray-950">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950" />
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-[360px] w-[360px] rounded-full bg-teal-500/5 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[90rem] px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8">
-          <p className="mb-4 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
+        <div className="relative mx-auto max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8">
+          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-emerald-400 sm:text-base">
             My Work
-          </p>
+          </div>
 
-          <h1 className="max-w-5xl text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+          <h1 className="mt-6 max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
             Products, ventures, and practical work across AI, product strategy,
             and execution.
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700 sm:text-xl">
-            This page highlights the products and initiatives I’m currently
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
+            This page highlights the products and initiatives I&apos;m currently
             building and exploring. My focus is on turning ideas into structured,
             useful, and real-world digital solutions with clarity and momentum.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
+      {/* ── Projects ── */}
+      <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="space-y-10">
           {projects.map((project) => (
             <article
@@ -167,7 +170,7 @@ export default function WorkPage() {
 
                 <div className="mt-8 rounded-2xl border border-gray-100 bg-white p-6">
                   <p className="mb-3 text-sm font-semibold text-emerald-600 sm:text-base">
-                    Who It’s For
+                    Who It&apos;s For
                   </p>
                   <p className="text-base leading-8 text-gray-700 sm:text-lg">
                     {project.audience}
@@ -227,32 +230,28 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-700 px-8 py-12 text-white shadow-2xl sm:px-10 md:px-12 md:py-16">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-white blur-3xl" />
-            <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-white blur-3xl" />
-          </div>
-
-          <div className="relative text-center">
-            <p className="mb-4 text-sm font-semibold tracking-wide text-white/85 sm:text-base">
+      {/* ── CTA ── */}
+      <section className="bg-gray-950">
+        <div className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="mb-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-emerald-400">
               Interested in building something similar?
-            </p>
+            </div>
 
-            <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-              Let’s talk about product, AI, and execution.
+            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+              Let&apos;s talk about product, AI, and execution.
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
-              I’m open to collaboration, product conversations, early-stage
+            <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
+              I&apos;m open to collaboration, product conversations, early-stage
               ideas, and opportunities where practical thinking and real
               delivery matter.
             </p>
 
-            <div className="mt-10 flex flex-col justify-center gap-5 sm:flex-row sm:flex-wrap">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4 text-base font-medium text-emerald-700 transition hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-700"
+                className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0D896C] px-8 py-4 text-base font-medium text-white shadow-lg transition hover:bg-[#0B6F56] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
               >
                 Start a Conversation
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -260,7 +259,7 @@ export default function WorkPage() {
 
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-2xl border-2 border-white/30 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-700"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
               >
                 Learn more about me
               </Link>
