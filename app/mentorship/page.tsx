@@ -348,10 +348,7 @@ export default function MentorshipPage() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <CalendlyButton
-                label="Book a 15-min Strategy Call"
-                className="bg-white text-gray-900 hover:bg-gray-100"
-              />
+              <CalendlyButton label="Book a 15-min Strategy Call" />
 
               <Link
                 href="/contact"

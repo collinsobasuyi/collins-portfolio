@@ -261,169 +261,217 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right — form or success state */}
           <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8 md:p-10">
-            <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
-              Prefer to send a message first?
-            </p>
-
-            <h2 className="text-2xl font-bold leading-tight text-gray-900 sm:text-3xl">
-              Share a little context and I&apos;ll respond within 24 hours.
-            </h2>
-
-            <p className="mt-4 text-base leading-8 text-gray-700 sm:text-lg">
-              For people who aren&apos;t ready to book a call yet but still want to reach
-              out with something specific.
-            </p>
-
-            <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
-                >
-                  Full name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your full name"
-                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
-                >
-                  Email address
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="topic"
-                  className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
-                >
-                  What are you looking for help with?
-                </label>
-                <select
-                  id="topic"
-                  name="topic"
-                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                  defaultValue=""
-                  required
-                >
-                  <option value="" disabled>Select a topic</option>
-                  <option value="Product strategy or collaboration">Product strategy or collaboration</option>
-                  <option value="Mentorship or career guidance">Mentorship or career guidance</option>
-                  <option value="AI product or AI opportunity">AI product or AI opportunity</option>
-                  <option value="Startup or founder support">Startup or founder support</option>
-                  <option value="General enquiry">General enquiry</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="currentSituation"
-                  className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
-                >
-                  Your current situation
-                </label>
-                <textarea
-                  id="currentSituation"
-                  name="currentSituation"
-                  rows={4}
-                  placeholder="Give me a little context on where you are right now."
-                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="outcome"
-                  className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
-                >
-                  What outcome are you hoping for?
-                </label>
-                <textarea
-                  id="outcome"
-                  name="outcome"
-                  rows={4}
-                  placeholder="Tell me what you want help achieving."
-                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
-                >
-                  Anything else I should know?
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  placeholder="Optional, but helpful."
-                  className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
-                />
-              </div>
-
-              <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-4">
-                <p className="text-sm leading-7 text-gray-700 sm:text-base">
-                  If your request is time-sensitive or you want faster feedback,
-                  booking a strategy call is usually the best option.
-                </p>
-              </div>
-
-              {formStatus && (
-                <div
-                  className={`rounded-2xl px-4 py-4 text-sm sm:text-base ${
-                    formStatus === "success"
-                      ? "border border-emerald-200 bg-emerald-50 text-emerald-800"
-                      : "border border-red-200 bg-red-50 text-red-800"
-                  }`}
-                >
-                  {statusMessage}
+            {formStatus === "success" ? (
+              <div className="flex flex-col items-center py-8 text-center">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50">
+                  <svg
+                    className="h-10 w-10 text-emerald-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
-              )}
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0D896C] px-8 py-4 text-base font-medium text-white shadow-lg shadow-emerald-100 transition hover:bg-[#0B6F56] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  {isSubmitting ? "Sending..." : "Send enquiry"}
-                  {!isSubmitting && (
-                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  )}
-                </button>
+                <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+                  Message received!
+                </h2>
+
+                <p className="mt-4 max-w-sm text-base leading-8 text-gray-600 sm:text-lg">
+                  Thanks for reaching out. I&apos;ll review your message and get
+                  back to you within 24 hours.
+                </p>
+
+                <div className="mt-8 w-full rounded-2xl border border-emerald-100 bg-emerald-50 p-5 text-left">
+                  <p className="text-sm font-semibold text-emerald-700 sm:text-base">
+                    Want a faster response?
+                  </p>
+                  <p className="mt-1 text-sm leading-7 text-gray-700 sm:text-base">
+                    Book a 15-min strategy call directly — it&apos;s the quickest
+                    way to get a conversation started.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={openCalendly}
+                    className="mt-4 inline-flex items-center gap-2 rounded-xl bg-[#0D896C] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#0B6F56] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 sm:text-base"
+                  >
+                    Book a Strategy Call
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
 
                 <button
                   type="button"
-                  onClick={openCalendly}
-                  className="inline-flex items-center justify-center rounded-2xl border-2 border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                  onClick={() => setFormStatus(null)}
+                  className="mt-6 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-700"
                 >
-                  Book a 15-min Strategy Call
+                  Send another message
                 </button>
               </div>
-            </form>
+            ) : (
+              <>
+                <p className="mb-4 text-sm font-semibold text-emerald-600 sm:text-base">
+                  Prefer to send a message first?
+                </p>
+
+                <h2 className="text-2xl font-bold leading-tight text-gray-900 sm:text-3xl">
+                  Share a little context and I&apos;ll respond within 24 hours.
+                </h2>
+
+                <p className="mt-4 text-base leading-8 text-gray-700 sm:text-lg">
+                  For people who aren&apos;t ready to book a call yet but still want to reach
+                  out with something specific.
+                </p>
+
+                <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
+                    >
+                      Full name
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Your full name"
+                      className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
+                    >
+                      Email address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="you@example.com"
+                      className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="topic"
+                      className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
+                    >
+                      What are you looking for help with?
+                    </label>
+                    <select
+                      id="topic"
+                      name="topic"
+                      className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                      defaultValue=""
+                      required
+                    >
+                      <option value="" disabled>Select a topic</option>
+                      <option value="Product strategy or collaboration">Product strategy or collaboration</option>
+                      <option value="Mentorship or career guidance">Mentorship or career guidance</option>
+                      <option value="AI product or AI opportunity">AI product or AI opportunity</option>
+                      <option value="Startup or founder support">Startup or founder support</option>
+                      <option value="General enquiry">General enquiry</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="currentSituation"
+                      className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
+                    >
+                      Your current situation
+                    </label>
+                    <textarea
+                      id="currentSituation"
+                      name="currentSituation"
+                      rows={4}
+                      placeholder="Give me a little context on where you are right now."
+                      className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="outcome"
+                      className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
+                    >
+                      What outcome are you hoping for?
+                    </label>
+                    <textarea
+                      id="outcome"
+                      name="outcome"
+                      rows={4}
+                      placeholder="Tell me what you want help achieving."
+                      className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="mb-2 block text-sm font-medium text-gray-900 sm:text-base"
+                    >
+                      Anything else I should know?
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      placeholder="Optional, but helpful."
+                      className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-4 text-base text-gray-900 placeholder:text-gray-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                    />
+                  </div>
+
+                  <div className="rounded-2xl border border-emerald-100 bg-emerald-50/60 px-4 py-4">
+                    <p className="text-sm leading-7 text-gray-700 sm:text-base">
+                      If your request is time-sensitive or you want faster feedback,
+                      booking a strategy call is usually the best option.
+                    </p>
+                  </div>
+
+                  {formStatus === "error" && (
+                    <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-800 sm:text-base">
+                      {statusMessage}
+                    </div>
+                  )}
+
+                  <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0D896C] px-8 py-4 text-base font-medium text-white shadow-lg shadow-emerald-100 transition hover:bg-[#0B6F56] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      {isSubmitting ? "Sending..." : "Send enquiry"}
+                      {!isSubmitting && (
+                        <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                      )}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={openCalendly}
+                      className="inline-flex items-center justify-center rounded-2xl border-2 border-gray-200 bg-white px-8 py-4 text-base font-medium text-gray-800 transition hover:border-emerald-300 hover:bg-emerald-50/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                    >
+                      Book a 15-min Strategy Call
+                    </button>
+                  </div>
+                </form>
+              </>
+            )}
           </div>
         </div>
       </section>
