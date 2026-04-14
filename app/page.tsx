@@ -269,7 +269,7 @@ export default function Home() {
       </section>
 
       {/* ── Why Work With Me ── */}
-      <section className="bg-gray-50 py-20 sm:py-24">
+      <section className="bg-gray-50 py-10 sm:py-12">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
             <div className="lg:sticky lg:top-10">
@@ -316,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-8 sm:py-10">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
           <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-gray-400">
             What people say

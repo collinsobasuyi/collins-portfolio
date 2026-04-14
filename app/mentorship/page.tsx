@@ -107,7 +107,7 @@ export default function MentorshipPage() {
         <div className="absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-violet-500/5 blur-3xl" />
         <div className="absolute bottom-0 left-0 h-[360px] w-[360px] rounded-full bg-indigo-500/5 blur-3xl" />
 
-        <div className="relative mx-auto max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8">
+        <div className="relative mx-auto max-w-[90rem] px-4 py-16 sm:px-6 sm:py-20 md:py-16 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-violet-400 sm:text-base">
