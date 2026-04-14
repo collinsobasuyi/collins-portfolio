@@ -41,7 +41,7 @@ const services = [
   {
     title: "AI Product Strategy",
     description:
-      "Shaping practical AI products, MVPs, and workflows that solve real problems and move beyond ideas on paper.",
+      "Helping teams define practical AI opportunities, shape product direction, and turn early ideas into deliverable roadmaps.",
     icon: Sparkles,
   },
   {
@@ -100,15 +100,15 @@ const experienceAreas = [
 const testimonials = [
   {
     quote:
-      "Collins helped me reframe my career completely. Within three months I moved from a QA role I'd outgrown into a product position I'd been aiming for. The clarity and direction he brought was genuinely different from anything I'd had before.",
-    name: "— Mentee, QA to Product transition",
-    category: "mentorship",
-  },
-  {
-    quote:
       "Brought in sharp product thinking and delivery structure at exactly the right moment. Collins understood the complexity of our environment quickly and helped us move with real momentum.",
     name: "— Delivery Lead, Financial Services",
     category: "consulting",
+  },
+  {
+    quote:
+      "Collins helped me reframe my career completely. Within three months I moved from a QA role I'd outgrown into a product position I'd been aiming for. The clarity and direction he brought was genuinely different from anything I'd had before.",
+    name: "— Mentee, QA to Product transition",
+    category: "mentorship",
   },
 ];
 
@@ -149,18 +149,18 @@ export default function Home() {
           <div className="mt-10 grid gap-10 md:gap-12 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
             <div>
               <p className="mb-5 text-base font-medium tracking-wide text-gray-400 sm:text-lg">
-                AI Product Consultant · Delivery Lead · Mentor
+                AI Product Consultant · Delivery Lead
               </p>
 
               <h1 className="max-w-5xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                Build better AI products. Deliver with more structure.
+                AI product strategy and delivery leadership for complex, regulated work.
               </h1>
 
               <p className="mt-8 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
-                I work with companies, founders, and teams who need sharper
-                product direction, stronger execution, and AI thinking grounded
-                in 15+ years of real delivery experience — across finance,
-                public health, government, and regulated environments.
+                I help companies and leadership teams shape better AI products,
+                bring more structure to delivery, and move complex work forward
+                with confidence. My background spans 15+ years across finance,
+                public health, government, and other regulated environments.
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -207,8 +207,8 @@ export default function Home() {
                   Best fit
                 </p>
                 <p className="mt-2 text-base leading-7 text-gray-300">
-                  Companies, startups, and teams who need senior product and
-                  delivery expertise — without the full-time overhead.
+                  Best for organisations that need senior product and delivery
+                  leadership on a contract, advisory, or fractional basis.
                 </p>
               </div>
             </div>
@@ -370,9 +370,10 @@ export default function Home() {
                 Growing your career in tech?
               </h2>
               <p className="mt-3 max-w-xl text-base leading-7 text-gray-600">
-                Alongside my consulting work, I mentor ambitious professionals
-                in QA, Business Analysis, and Product Management — helping them
-                move forward with more clarity, confidence, and direction.
+                Alongside my consulting work, I mentor professionals looking to
+                grow in QA, Product, and adjacent roles — especially those
+                navigating transitions into product thinking, leadership, or
+                AI-focused work.
               </p>
               <div className="mt-5 flex flex-wrap gap-2.5">
                 {["Career Strategy", "Technical Mentorship", "Leadership Growth"].map((item) => (
@@ -403,7 +404,7 @@ export default function Home() {
               My Ventures
             </p>
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              What I&apos;m building on the side.
+              Products and ventures I&apos;m developing.
             </h2>
             <p className="mt-3 max-w-xl text-base text-gray-600">
               Alongside client work, I&apos;m building a set of AI products at
@@ -451,8 +452,8 @@ export default function Home() {
               Ready to work together?<br />Let&apos;s talk.
             </h2>
             <p className="mt-5 text-base leading-7 text-gray-400 sm:text-lg">
-              Whether you need a product lead, delivery structure, or AI
-              direction — a short conversation is the right first step.
+              Whether you need product leadership, delivery structure, or
+              clearer AI direction, a short conversation is the right first step.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link
