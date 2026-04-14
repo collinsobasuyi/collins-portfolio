@@ -31,21 +31,12 @@ export const metadata: Metadata = {
     title: "Collins Obasuyi | AI Product Leader, Delivery & Mentorship",
     description:
       "AI product strategy, delivery leadership, and mentorship for founders, teams, and ambitious professionals.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Collins Obasuyi — AI Product Leader, Delivery & Mentorship",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Collins Obasuyi | AI Product Leader, Delivery & Mentorship",
     description:
       "AI product strategy, delivery leadership, and mentorship for founders, teams, and ambitious professionals.",
-    images: ["/og-image.png"],
     creator: "@collinsobasuyi",
   },
   robots: {

@@ -230,17 +230,26 @@ export default function ServicesPage() {
 
       {/* ── Service areas ── */}
       <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mb-12">
-          <p className="mb-3 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
-            What I Do
-          </p>
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Three core service areas
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
-            Each one can stand alone or work together depending on what your
-            team needs most right now.
-          </p>
+        <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-3 text-sm font-semibold tracking-wide text-emerald-600 sm:text-base">
+              What I Do
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Three core service areas
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
+              Each one can stand alone or work together depending on what your
+              team needs most right now.
+            </p>
+          </div>
+          <Link
+            href="/case-studies"
+            className="group inline-flex shrink-0 items-center gap-2 rounded-xl border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700"
+          >
+            See case studies
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
