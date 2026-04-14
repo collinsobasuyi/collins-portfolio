@@ -341,6 +341,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Case studies nudge ── */}
+      <section className="mx-auto max-w-[90rem] px-4 pb-6 sm:px-6 lg:px-8">
+        <Link
+          href="/case-studies"
+          className="group flex items-center justify-between rounded-2xl border border-gray-100 bg-gray-50 px-6 py-5 transition hover:border-emerald-200 hover:bg-emerald-50/40 hover:shadow-sm"
+        >
+          <div>
+            <p className="text-sm font-semibold text-emerald-700">Delivery in practice</p>
+            <p className="mt-0.5 text-base font-medium text-gray-900">
+              See how I work — real problems, real outcomes.
+            </p>
+          </div>
+          <ArrowRight className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-emerald-600" />
+        </Link>
+      </section>
+
       {/* ── Mentorship — secondary path for individuals ── */}
       <section className="mx-auto max-w-[90rem] px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-violet-100 bg-gradient-to-br from-violet-50 to-indigo-50/30 p-8 sm:p-10">
