@@ -106,6 +106,18 @@ const testimonials = [
   },
   {
     quote:
+      "Collins gave us clarity where we had none. He quickly understood both the technical and business sides of what we were trying to do and helped the team move forward with real confidence.",
+    name: "— Engineering Lead, Technology Scale-up",
+    category: "consulting",
+  },
+  {
+    quote:
+      "Exactly the kind of senior presence we needed — someone who could speak to both product and engineering, keep delivery on track, and push back when it mattered. Genuinely valuable.",
+    name: "— Product Director, Government & Public Sector",
+    category: "consulting",
+  },
+  {
+    quote:
       "Collins helped me reframe my career completely. Within three months I moved from a QA role I'd outgrown into a product position I'd been aiming for. The clarity and direction he brought was genuinely different from anything I'd had before.",
     name: "— Mentee, QA to Product transition",
     category: "mentorship",
@@ -153,7 +165,7 @@ export default function Home() {
               </p>
 
               <h1 className="max-w-5xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                AI product strategy and delivery leadership for complex, regulated work.
+                Senior AI product and delivery leadership — for teams where the stakes are real.
               </h1>
 
               <p className="mt-8 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
@@ -176,6 +188,19 @@ export default function Home() {
                   label="Book a Strategy Call"
                   className="border-2 border-gray-600 bg-transparent text-white hover:border-emerald-500 hover:bg-emerald-950/40"
                 />
+
+                <Link
+                  href="https://www.linkedin.com/in/collins-obasuyi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-gray-700 bg-transparent px-5 py-4 text-base font-medium text-gray-400 transition hover:border-gray-500 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+                  aria-label="View LinkedIn profile"
+                >
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                  LinkedIn
+                </Link>
               </div>
             </div>
 
@@ -187,9 +212,9 @@ export default function Home() {
 
               <div className="mt-8 space-y-6">
                 {[
-                  "15+ years across product, delivery, quality, and technical leadership",
-                  "Contracted for major organisations across finance, public health, and government",
-                  "Building AI products, MVPs, and practical digital solutions with real-world value",
+                  "Contracted by Amazon, Bloomberg, Bank of America, and HMRC on product and delivery programmes",
+                  "15+ years leading delivery in finance, public health, government, and regulated environments",
+                  "Available for contract, advisory, and fractional engagements — remote or on-site across the UK",
                 ].map((item, idx) => (
                   <div key={item} className="border-b border-gray-700 pb-6 last:border-b-0 last:pb-0">
                     <div className="flex gap-4">
@@ -321,7 +346,7 @@ export default function Home() {
           <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-gray-400">
             What people say
           </p>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {testimonials.map((t) => (
               <div key={t.name} className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
                 <div className="mb-5">
