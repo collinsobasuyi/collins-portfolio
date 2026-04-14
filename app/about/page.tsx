@@ -462,7 +462,7 @@ export default function AboutPage() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <Link
-                href="/work"
+                href="/ventures"
                 className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-[#0D896C] px-8 py-4 text-base font-medium text-white shadow-lg transition hover:bg-[#0B6F56] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D896C] focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
               >
                 Explore My Work

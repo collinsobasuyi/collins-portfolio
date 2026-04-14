@@ -130,7 +130,7 @@ export default function MentorshipPage() {
                 <CalendlyButton label="Book a Discovery Call" />
 
                 <Link
-                  href="/work"
+                  href="/ventures"
                   className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
                 >
                   View My Work
