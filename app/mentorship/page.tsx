@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Mentorship | Collins Obasuyi",
+  description:
+    "Mentorship for tech professionals in QA, Business Analysis, and Product Management. Career strategy, technical mentorship, and leadership growth with Collins Obasuyi.",
+  openGraph: {
+    title: "Mentorship for Tech Professionals | Collins Obasuyi",
+    description:
+      "Practical career mentorship for QA engineers, business analysts, and product managers looking for clarity, direction, and growth.",
+    url: "https://collinsobasuyi.com/mentorship",
+  },
+  alternates: { canonical: "https://collinsobasuyi.com/mentorship" },
+};
 import CalendlyButton from "@/components/calendly-button";
 import {
   ArrowRight,

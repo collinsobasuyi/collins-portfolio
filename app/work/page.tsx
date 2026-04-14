@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Work | Collins Obasuyi",
+  description:
+    "Explore the ventures Collins Obasuyi is building — UBUNCARE (AI mental health), RiskPilot AI (AI governance), and YSLR Labs (AI product studio).",
+  openGraph: {
+    title: "Work & Ventures | Collins Obasuyi",
+    description:
+      "AI products, ventures, and practical work across product strategy and execution.",
+    url: "https://collinsobasuyi.com/work",
+  },
+  alternates: { canonical: "https://collinsobasuyi.com/work" },
+};
 import { ArrowRight, Sparkles, Shield, Layers3 } from "lucide-react";
 
 const projects = [

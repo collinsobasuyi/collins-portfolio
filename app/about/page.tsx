@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About | Collins Obasuyi",
+  description:
+    "Learn about Collins Obasuyi — 15+ years across product, delivery, and quality engineering. Contracted for Bank of America, Bloomberg, Amazon, HMRC, and more.",
+  openGraph: {
+    title: "About Collins Obasuyi",
+    description:
+      "AI product leader, founder, and mentor with 15+ years across finance, public health, and regulated environments.",
+    url: "https://collinsobasuyi.com/about",
+  },
+  alternates: { canonical: "https://collinsobasuyi.com/about" },
+};
 import {
   ArrowRight,
   Brain,

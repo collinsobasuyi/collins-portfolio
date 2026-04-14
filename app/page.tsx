@@ -1,7 +1,5 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Users,
@@ -10,12 +8,26 @@ import {
   Sparkles,
   Rocket,
   Shield,
-  ChevronUp,
   CheckCircle2,
   Briefcase,
   Brain,
   Layers3,
 } from "lucide-react";
+import ScrollToTop from "@/components/scroll-to-top";
+
+export const metadata: Metadata = {
+  title: "Collins Obasuyi | AI Product Leader, Delivery & Mentorship",
+  description:
+    "Collins Obasuyi — AI product strategy, delivery leadership, and mentorship for founders, teams, and ambitious tech professionals. 15+ years across product, quality, and AI.",
+  openGraph: {
+    title: "Collins Obasuyi | AI Product Leader, Delivery & Mentorship",
+    description:
+      "AI product strategy, delivery leadership, and mentorship for founders, teams, and ambitious professionals.",
+    url: "https://collinsobasuyi.com",
+    type: "website",
+  },
+  alternates: { canonical: "https://collinsobasuyi.com" },
+};
 
 const stats = [
   "15+ years across product, delivery, quality, and technical leadership",
@@ -146,21 +158,6 @@ const reasonsToWorkWithMe = [
 ];
 
 export default function Home() {
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 500);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <>
       <section className="relative overflow-hidden bg-gray-950">
@@ -702,15 +699,7 @@ export default function Home() {
         </div>
       </section>
 
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 rounded-full bg-white p-3 text-gray-700 shadow-lg ring-1 ring-gray-200 transition hover:bg-gray-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2"
-          aria-label="Scroll to top"
-        >
-          <ChevronUp className="h-5 w-5" />
-        </button>
-      )}
+      <ScrollToTop />
     </>
     
   );

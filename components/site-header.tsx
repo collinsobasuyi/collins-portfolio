@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, UserRound, Briefcase, Users } from "lucide-react";
+import { Menu, X, UserRound, Briefcase, Users, Layers3 } from "lucide-react";
 
 const NAV_ITEMS = [
   { name: "About", href: "/about", icon: UserRound },
+  { name: "Services", href: "/services", icon: Layers3 },
   { name: "Work", href: "/work", icon: Briefcase },
   { name: "Mentorship", href: "/mentorship", icon: Users },
 ] as const;

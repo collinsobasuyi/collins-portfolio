@@ -8,6 +8,7 @@ import type { ComponentType, SVGProps } from "react";
 const FOOTER_NAVIGATION = {
   navigate: [
     { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
     { name: "Work", href: "/work" },
     { name: "Mentorship", href: "/mentorship" },
   ],
