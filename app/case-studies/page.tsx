@@ -6,7 +6,7 @@ import CalendlyButton from "@/components/calendly-button";
 export const metadata: Metadata = {
   title: "Case Studies | Collins Obasuyi",
   description:
-    "Real delivery work — AI product strategy, delivery restructuring, and quality engineering across financial services, government, and technology. How Collins Obasuyi works in practice.",
+    "Real delivery work: AI product strategy, delivery restructuring, and quality engineering across financial services, government, and technology. How Collins Obasuyi works in practice.",
   openGraph: {
     title: "Case Studies | Collins Obasuyi",
     description:
@@ -28,7 +28,7 @@ const caseStudies = [
     challenge:
       "A financial services data team had strong technical talent but slow, inconsistent delivery cycles. High regression risk, unclear quality ownership, and mounting pressure from senior stakeholders were creating real business risk. Releases were taking longer, incidents were increasing, and the team had lost confidence in their own process.",
     approach: [
-      "Embedded as delivery lead to observe and understand the real blockers — not just the symptoms",
+      "Embedded as delivery lead to observe and understand the real blockers, not just the symptoms",
       "Mapped the full delivery pipeline and identified where quality risk was accumulating silently",
       "Introduced structured sprint ceremonies with clear ownership and accountability at each stage",
       "Built a QA strategy that separated regression risk from exploratory testing, reducing duplication",
@@ -36,13 +36,13 @@ const caseStudies = [
       "Created a shared definition of done that aligned engineering, QA, and product expectations",
     ],
     outcomes: [
-      "Release cycle shortened — fewer last-minute blockers before production",
+      "Release cycle shortened, with fewer last-minute blockers before production",
       "Regression incidents dropped significantly over the first three months",
       "Team regained confidence in the delivery process and their ability to ship",
       "Stakeholder trust rebuilt through clearer, more consistent reporting",
     ],
     reflection:
-      "The biggest shift wasn't process — it was helping the team see where real risk was sitting. Once that was visible, the solutions were obvious and the team drove most of the improvements themselves.",
+      "The biggest shift wasn't process. It was helping the team see where real risk was sitting. Once that was visible, the solutions were obvious and the team drove most of the improvements themselves.",
   },
   {
     id: "public-sector-ai",
@@ -53,9 +53,9 @@ const caseStudies = [
     headline:
       "Defining a responsible AI product strategy for a public sector data initiative",
     challenge:
-      "A public sector organisation wanted to explore how AI could improve their data processing and public-facing information delivery. The challenge went beyond the technical — they needed a responsible, governance-aware approach that senior stakeholders could trust, that passed internal review, and that wouldn't create new risk in a sensitive environment.",
+      "A public sector organisation wanted to explore how AI could improve their data processing and public-facing information delivery. The challenge went beyond the technical. They needed a responsible, governance-aware approach that senior stakeholders could trust, that passed internal review, and that wouldn't create new risk in a sensitive environment.",
     approach: [
-      "Led the product strategy and discovery phase from the outset — no pre-existing assumptions",
+      "Led the product strategy and discovery phase from the outset. No pre-existing assumptions.",
       "Ran structured stakeholder workshops to define scope, constraints, and ethical guardrails",
       "Translated complex AI capability into terms procurement, policy, and operational teams could assess",
       "Shaped an AI-assisted workflow that balanced genuine capability with realistic compliance requirements",
@@ -64,7 +64,7 @@ const caseStudies = [
     ],
     outcomes: [
       "Clear AI product brief with defined governance approach, ready for internal sign-off",
-      "Stakeholder alignment achieved across technical, policy, and operational teams — no holdouts",
+      "Stakeholder alignment achieved across technical, policy, and operational teams. No holdouts.",
       "MVP handed off with full documentation, delivery structure, and responsible AI framing",
       "Organisation had a reusable template for future AI initiatives in regulated contexts",
     ],
@@ -84,19 +84,19 @@ const caseStudies = [
     approach: [
       "Conducted a quality audit across the entire delivery pipeline before recommending anything",
       "Identified the highest-risk user journeys and mapped them to the team's existing test coverage gaps",
-      "Defined a pragmatic automation strategy — prioritising value over completeness from day one",
+      "Defined a pragmatic automation strategy, prioritising value over completeness from day one",
       "Worked with engineers and product to establish clear quality ownership at each stage",
       "Introduced automated regression coverage for the most critical user flows within the first six weeks",
       "Built a lightweight quality process that the team could maintain and extend without external support",
     ],
     outcomes: [
-      "Testing bottleneck removed from the release path — engineers could ship without manual sign-off delays",
+      "Testing bottleneck removed from the release path. Engineers could ship without manual sign-off delays.",
       "Automated coverage introduced for core user journeys, reducing regression risk significantly",
       "Clear quality strategy documented and embedded in the team's sprint workflow",
-      "Engineers more confident shipping independently — 'fear of Friday deploys' largely gone",
+      "Engineers more confident shipping independently. The fear of Friday deploys was largely gone.",
     ],
     reflection:
-      "Most quality problems aren't really quality problems — they're ownership problems. Once we made it clear who was responsible for what, the team solved most of the technical challenges themselves. The process work was secondary.",
+      "Most quality problems aren't really quality problems. They're ownership problems. Once we made it clear who was responsible for what, the team solved most of the technical challenges themselves. The process work was secondary.",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function CaseStudiesPage() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
-            These are examples of the kind of work I do — the challenges teams
+            These are examples of the kind of work I do. The challenges teams
             bring, how I approach them, and what changes as a result. Client
             details are kept general to respect confidentiality.
           </p>
@@ -231,8 +231,7 @@ export default function CaseStudiesPage() {
             <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
               Every engagement starts with a short conversation. Tell me where
               your team is, what&apos;s not moving, and what you want to
-              achieve — and I&apos;ll be direct about whether and how I can
-              help.
+              achieve. I&apos;ll be direct about whether and how I can help.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">

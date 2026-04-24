@@ -29,7 +29,7 @@ const services = [
   {
     title: "AI Product Strategy",
     description:
-      "I help teams define, shape, and build AI products with clarity — from early concept through to MVP and beyond. This includes problem framing, product direction, user journey design, and practical AI integration.",
+      "I help teams define, shape, and build AI products with clarity, from early concept through to MVP and beyond. This includes problem framing, product direction, user journey design, and practical AI integration.",
     icon: Sparkles,
     outcomes: [
       "AI product vision and roadmap",
@@ -55,7 +55,7 @@ const services = [
   {
     title: "Technical Quality",
     description:
-      "My background in Quality Engineering means I understand what it takes for products to hold up in the real world. I help teams build quality in from the start — not bolt it on at the end.",
+      "My background in Quality Engineering means I understand what it takes for products to hold up in the real world. I help teams build quality in from the start, not bolt it on at the end.",
     icon: Shield,
     outcomes: [
       "QA strategy and test coverage",
@@ -71,21 +71,21 @@ const engagementTypes = [
   {
     title: "Advisory",
     description:
-      "Strategic input on a regular basis — a part-time senior voice that helps your team make better product and delivery decisions without the full-time overhead.",
+      "Strategic input on a regular basis. A part-time senior voice that helps your team make better product and delivery decisions without the full-time overhead.",
     icon: Briefcase,
     detail: "Typically 1–2 days per week or a structured retainer",
   },
   {
     title: "Embedded",
     description:
-      "Working closely within your team for a defined period. I integrate with your people, your process, and your rhythm to create real momentum from the inside.",
+      "Working closely within your team for a defined period. I get into the work, learn the context, and help create real momentum from the inside.",
     icon: Users,
     detail: "Defined engagement period, full involvement",
   },
   {
     title: "Project-Based",
     description:
-      "Scoped work around a specific challenge or initiative — with clear outcomes, a defined timeline, and focused delivery. Right for teams that need targeted expertise fast.",
+      "Scoped work around a specific challenge or initiative, with clear outcomes, a defined timeline, and focused delivery. Right for teams that need targeted expertise fast.",
     icon: Layers3,
     detail: "Fixed scope, outcome-focused delivery",
   },
@@ -116,25 +116,25 @@ const process = [
     step: "01",
     title: "Start with a conversation",
     description:
-      "Book a 15-min call to share what you're working on, what's not moving, and what you need. No pitch — just a practical first conversation.",
+      "Book a 15-min call to share what you're working on, what's not moving, and what you need. No pitch. Just a practical first conversation.",
   },
   {
     step: "02",
     title: "Agree scope and approach",
     description:
-      "Based on your situation, I'll suggest the right engagement type and define a clear scope — what we'll do, how we'll work, and what good looks like.",
+      "Based on your situation, I'll suggest the right engagement type and define a clear scope: what we'll do, how we'll work, and what good looks like.",
   },
   {
     step: "03",
     title: "Work together",
     description:
-      "I integrate with your team, your rhythm, and your context. The focus is always on making things clearer, faster, and better — not adding process for its own sake.",
+      "I work within your team's process and get into the detail. The focus is always on making things clearer, faster, and better. Not adding process for its own sake.",
   },
   {
     step: "04",
     title: "Review and decide what's next",
     description:
-      "At the end of every engagement we review outcomes against what we set out to achieve. Whether we continue, hand over, or close — it's always a clear decision.",
+      "At the end of every engagement we review outcomes against what we set out to achieve. Whether we continue, hand over, or close, it's always a clear decision.",
   },
 ];
 
@@ -164,13 +164,13 @@ export default function ServicesPage() {
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-start">
             <div>
               <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-                Practical AI, product, and delivery expertise — for teams who need to move with clarity.
+                Practical AI, product, and delivery expertise. For teams who need to move with clarity.
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
                 I work with companies, startups, and teams that need more than a
                 generic consultant. My background spans product management,
-                delivery leadership, and quality engineering — giving you a
+                delivery leadership, and quality engineering, giving you a
                 senior partner who understands strategy and execution equally.
               </p>
 
@@ -300,7 +300,7 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
               Different teams need different things. Pick the model that fits
-              your situation — or we can talk it through.
+              your situation, or we can talk it through.
             </p>
           </div>
 
@@ -342,7 +342,7 @@ export default function ServicesPage() {
               The right fit matters as much as the right skills.
             </h2>
             <p className="mt-5 text-base leading-8 text-gray-600 sm:text-lg">
-              I work best with teams who want a senior partner — not someone
+              I work best with teams who want a senior partner, not someone
               to hand off to. If you want real input, genuine execution, and
               someone who will tell you the truth about your product, we&apos;ll
               work well together.
@@ -423,7 +423,7 @@ export default function ServicesPage() {
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
               The best first step is a short conversation. Tell me where you
-              are, what&apos;s not working, and what you want to achieve — and
+              are, what&apos;s not working, and what you want to achieve.
               I&apos;ll be honest about whether and how I can help.
             </p>
 

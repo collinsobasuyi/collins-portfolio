@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Collins Obasuyi",
   },
   description:
-    "Collins Obasuyi — AI product strategy, delivery leadership, and mentorship for founders, teams, and ambitious tech professionals. 15+ years across product, quality, and AI.",
+    "Collins Obasuyi. AI product strategy, delivery leadership, and mentorship for founders, teams, and ambitious tech professionals. 15+ years across product, quality, and AI.",
   keywords: [
     "AI product strategy",
     "delivery leadership",

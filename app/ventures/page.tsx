@@ -5,11 +5,11 @@ import { ArrowRight, Sparkles, Shield, Layers3 } from "lucide-react";
 export const metadata: Metadata = {
   title: "Ventures | Collins Obasuyi",
   description:
-    "The ventures Collins Obasuyi is building — UBUNCARE (AI mental health), RiskPilot AI (AI governance), and YSLR Labs (AI product studio).",
+    "The ventures Collins Obasuyi is building: UBUNCARE (AI mental health), RiskPilot AI (AI governance), and YSLR Labs (AI product studio).",
   openGraph: {
     title: "Ventures | Collins Obasuyi",
     description:
-      "AI products and ventures at different stages — each built with intention, not just ambition.",
+      "AI products and ventures at different stages, each built with intention, not just ambition.",
     url: "https://collinsobasuyi.com/ventures",
   },
   alternates: { canonical: "https://collinsobasuyi.com/ventures" },
@@ -25,15 +25,15 @@ const projects = [
     status: "In Progress",
     focus: "Mental health AI",
     audience:
-      "People looking for more accessible, emotionally supportive digital mental health experiences.",
+      "People who want mental health support that actually feels human and accessible.",
     whyItMatters:
-      "Designed to make mental health support feel more human, structured, and accessible.",
+      "The goal is to make mental health support feel more human, structured, and accessible.",
     icon: Sparkles,
     gradient: "from-amber-500 to-orange-500",
     problem:
       "Many people struggle to access consistent, emotionally supportive mental health guidance. A lot of digital tools feel generic, impersonal, or disconnected from the user's lived experience.",
     solution:
-      "UBUNCARE is being designed as an AI-powered mental health support platform that combines structured journeys, emotionally aware interaction, and a more accessible digital experience.",
+      "UBUNCARE is an AI-powered mental health platform built around structured journeys, emotional awareness, and an experience that feels accessible and human.",
     approach:
       "I'm shaping the product strategy, user journey, and MVP direction, with a focus on trust, clarity, ethical support, and practical usability across web and app experiences.",
     currentFocus: [
@@ -59,9 +59,9 @@ const projects = [
     problem:
       "Many organisations are adopting AI without clear governance, practical risk visibility, or strong internal structure around compliance and responsible deployment.",
     solution:
-      "RiskPilot AI is being explored as a platform that helps teams understand AI risk, improve governance readiness, and make more informed decisions around AI adoption.",
+      "RiskPilot AI is a platform to help teams understand AI risk, build governance readiness, and make better decisions around AI adoption.",
     approach:
-      "The product direction combines AI governance thinking, product strategy, and practical business usability, especially for teams that need structure without unnecessary complexity.",
+      "The product combines AI governance, strategy, and usability, built for teams that need structure without overcomplication.",
     currentFocus: [
       "Problem validation and product framing",
       "Defining target users and core use cases",
@@ -79,7 +79,7 @@ const projects = [
     audience:
       "Early-stage product ideas, experiments, and digital opportunities that need structure, momentum, and practical execution.",
     whyItMatters:
-      "Created to move promising ideas out of concept stage and into real exploration and execution.",
+      "The goal is to move ideas out of concept stage and into real exploration and execution.",
     icon: Layers3,
     gradient: "from-emerald-500 to-teal-500",
     problem:
@@ -87,7 +87,7 @@ const projects = [
     solution:
       "YSLR Labs is the umbrella for exploring, shaping, and building ideas into practical products, experiments, and early-stage digital solutions.",
     approach:
-      "It serves as a space for focused experimentation across AI, product strategy, delivery thinking, and early-stage solution design, with an emphasis on real execution over hype.",
+      "It's where I explore and build ideas across AI, product strategy, and delivery. The focus is execution, not hype.",
     currentFocus: [
       "Developing and refining startup ideas",
       "Creating practical MVP concepts and workflows",
@@ -209,8 +209,8 @@ export default function VenturesPage() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
-              If any of these ventures resonate — or if you&apos;re building
-              something similar and want to compare notes — I&apos;m always open
+              If any of these ventures resonate, or if you&apos;re building
+              something similar and want to compare notes, I&apos;m always open
               to a conversation.
             </p>
 

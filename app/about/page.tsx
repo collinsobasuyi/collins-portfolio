@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About | Collins Obasuyi",
   description:
-    "Learn about Collins Obasuyi — 15+ years across product, delivery, and quality engineering. Contracted for Bank of America, Bloomberg, Amazon, HMRC, and more.",
+    "Learn about Collins Obasuyi. 15+ years across product, delivery, and quality engineering. Contracted for Bank of America, Bloomberg, Amazon, HMRC, and more.",
   openGraph: {
     title: "About Collins Obasuyi",
     description:
@@ -62,7 +62,7 @@ const strengths = [
   {
     title: "Mentorship & Growth",
     description:
-      "I mentor professionals in QA, Business Analysis, and Product Management — helping them reposition, grow with confidence, and find clearer direction.",
+      "I mentor professionals in QA, Business Analysis, and Product Management. I help them reposition, grow with confidence, and find clearer direction.",
     icon: Users,
     accent: "violet",
   },
@@ -277,16 +277,15 @@ export default function AboutPage() {
                 Over the years, I&apos;ve worked across complex products and systems
                 where quality, clarity, and execution genuinely matter. My
                 background spans product management, delivery leadership, and
-                quality engineering, which gives me a broader and more grounded
-                view of how products move from concept to reality.
+                quality engineering, which gives me a clearer picture of how
+                products move from idea to reality.
               </p>
 
               <p>
-                I&apos;m especially drawn to the space between strategy and
-                execution. I enjoy taking ideas that feel messy or ambitious and
-                shaping them into something more structured, practical, and
-                useful. That has become one of the defining themes of how I
-                work.
+                The part I find most interesting is where strategy meets
+                execution. Taking ideas that feel messy or ambitious and turning
+                them into something structured, practical, and useful. That is
+                the work I keep coming back to.
               </p>
 
               <p>
@@ -299,8 +298,8 @@ export default function AboutPage() {
               <p>
                 Today, I&apos;m focused on AI products, venture building, and
                 practical digital tools that solve meaningful problems. Alongside
-                that, I mentor professionals in tech — in QA, business analysis,
-                and product — who want stronger positioning, clearer direction,
+                that, I mentor professionals in tech: QA, business analysis,
+                and product. They want stronger positioning, clearer direction,
                 and more confidence in how they grow.
               </p>
             </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Collins Obasuyi",
-  description: "Privacy policy for collinsobasuyi.com — how your information is collected, used, and protected.",
+  description: "Privacy policy for collinsobasuyi.com. How your information is collected, used, and protected.",
   alternates: { canonical: "https://collinsobasuyi.com/privacy" },
 };
 

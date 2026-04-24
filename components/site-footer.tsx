@@ -98,7 +98,7 @@ export default function SiteFooter() {
             </Link>
 
             <p className="mt-3 text-base leading-relaxed text-gray-600">
-              AI product strategy, delivery leadership, and mentorship — for
+              AI product strategy, delivery leadership, and mentorship for
               founders, teams, and ambitious professionals.
             </p>
 

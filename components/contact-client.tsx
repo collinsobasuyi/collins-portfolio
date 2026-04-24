@@ -254,7 +254,7 @@ export default function ContactClient() {
                 <div className="mt-8 w-full rounded-2xl border border-emerald-100 bg-emerald-50 p-5 text-left">
                   <p className="text-sm font-semibold text-emerald-700 sm:text-base">Want a faster response?</p>
                   <p className="mt-1 text-sm leading-7 text-gray-700 sm:text-base">
-                    Book a 15-min strategy call directly — it&apos;s the quickest way to get a conversation started.
+                    Book a 15-min strategy call directly. It&apos;s the quickest way to get a conversation started.
                   </p>
                   <button
                     type="button"

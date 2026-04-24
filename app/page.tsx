@@ -16,7 +16,7 @@ import CalendlyButton from "@/components/calendly-button";
 export const metadata: Metadata = {
   title: "Collins Obasuyi | AI Product Consultant & Delivery Lead",
   description:
-    "Collins Obasuyi — AI product strategy, delivery leadership, and technical quality for companies and teams. 15+ years. Contracted for Amazon, Bloomberg, Bank of America, HMRC, and more.",
+    "Collins Obasuyi. AI product strategy, delivery leadership, and technical quality for companies and teams. 15+ years. Contracted for Amazon, Bloomberg, Bank of America, HMRC, and more.",
   openGraph: {
     title: "Collins Obasuyi | AI Product Consultant & Delivery Lead",
     description:
@@ -47,7 +47,7 @@ const services = [
   {
     title: "Delivery Leadership",
     description:
-      "From product direction to structured execution — clarity, momentum, and delivery discipline for complex work.",
+      "From product direction to structured execution: clarity, momentum, and delivery discipline for complex work.",
     icon: Rocket,
   },
   {
@@ -74,7 +74,7 @@ const reasonsToWorkWithMe = [
   {
     title: "Execution-focused",
     description:
-      "I care about turning ideas into something real, useful, and well delivered — not just producing plans with no momentum.",
+      "I care about turning ideas into something real, useful, and well delivered. Not just producing plans with no momentum.",
     icon: Briefcase,
   },
   {
@@ -101,25 +101,25 @@ const testimonials = [
   {
     quote:
       "Brought in sharp product thinking and delivery structure at exactly the right moment. Collins understood the complexity of our environment quickly and helped us move with real momentum.",
-    name: "— Delivery Lead, Financial Services",
+    name: "Delivery Lead, Financial Services",
     category: "consulting",
   },
   {
     quote:
       "Collins gave us clarity where we had none. He quickly understood both the technical and business sides of what we were trying to do and helped the team move forward with real confidence.",
-    name: "— Engineering Lead, Technology Scale-up",
+    name: "Engineering Lead, Technology Scale-up",
     category: "consulting",
   },
   {
     quote:
-      "Exactly the kind of senior presence we needed — someone who could speak to both product and engineering, keep delivery on track, and push back when it mattered. Genuinely valuable.",
-    name: "— Product Director, Government & Public Sector",
+      "Exactly the kind of senior presence we needed. Someone who could speak to both product and engineering, keep delivery on track, and push back when it mattered. Genuinely valuable.",
+    name: "Product Director, Government & Public Sector",
     category: "consulting",
   },
   {
     quote:
       "Collins helped me reframe my career completely. Within three months I moved from a QA role I'd outgrown into a product position I'd been aiming for. The clarity and direction he brought was genuinely different from anything I'd had before.",
-    name: "— Mentee, QA to Product transition",
+    name: "Mentee, QA to Product transition",
     category: "mentorship",
   },
 ];
@@ -165,7 +165,7 @@ export default function Home() {
               </p>
 
               <h1 className="max-w-5xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-                Senior AI product and delivery leadership — for teams where the stakes are real.
+                Senior AI product and delivery leadership. For teams where the stakes are real.
               </h1>
 
               <p className="mt-8 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
@@ -214,7 +214,7 @@ export default function Home() {
                 {[
                   "Contracted by Amazon, Bloomberg, Bank of America, and HMRC on product and delivery programmes",
                   "15+ years leading delivery in finance, public health, government, and regulated environments",
-                  "Available for contract, advisory, and fractional engagements — remote or on-site across the UK",
+                  "Available for contract, advisory, and fractional engagements. Remote or on-site across the UK.",
                 ].map((item, idx) => (
                   <div key={item} className="border-b border-gray-700 pb-6 last:border-b-0 last:pb-0">
                     <div className="flex gap-4">
@@ -306,7 +306,7 @@ export default function Home() {
               </h2>
               <p className="mt-5 text-base leading-7 text-gray-600 sm:text-lg">
                 Strategy without execution is just a document. Execution without
-                credibility is just noise. I bring both — plus the technical
+                credibility is just noise. I bring both, with the technical
                 depth to know the difference.
               </p>
               <div className="mt-8">
@@ -359,7 +359,7 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-base leading-7 text-gray-700 sm:text-lg">&ldquo;{t.quote}&rdquo;</p>
-                <p className="mt-5 text-sm font-semibold text-gray-500">{t.name}</p>
+                <p className="mt-5 text-sm font-semibold text-gray-500">· {t.name}</p>
               </div>
             ))}
           </div>
@@ -375,7 +375,7 @@ export default function Home() {
           <div>
             <p className="text-sm font-semibold text-emerald-700">Delivery in practice</p>
             <p className="mt-0.5 text-base font-medium text-gray-900">
-              See how I work — real problems, real outcomes.
+              See how I work. Real problems, real outcomes.
             </p>
           </div>
           <ArrowRight className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-emerald-600" />
@@ -396,7 +396,7 @@ export default function Home() {
               </h2>
               <p className="mt-3 max-w-xl text-base leading-7 text-gray-600">
                 Alongside my consulting work, I mentor professionals looking to
-                grow in QA, Product, and adjacent roles — especially those
+                grow in QA, Product, and adjacent roles, especially those
                 navigating transitions into product thinking, leadership, or
                 AI-focused work.
               </p>
