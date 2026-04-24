@@ -147,7 +147,7 @@ export default function CoachingPage() {
 
             {/* Left — copy */}
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-violet-400">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 font-medium text-violet-400">
                 <Star className="h-3.5 w-3.5" />
                 6-Week Programme · 5 Spots per Cohort · UK-Based
               </div>
@@ -379,7 +379,7 @@ export default function CoachingPage() {
                       <div className="inline-flex rounded-lg bg-violet-50 p-2 text-violet-600">
                         <w.icon className="h-4 w-4" />
                       </div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-violet-500">
+                      <span className="text-sm font-semibold uppercase tracking-wide text-violet-500">
                         {w.week}
                       </span>
                     </div>
