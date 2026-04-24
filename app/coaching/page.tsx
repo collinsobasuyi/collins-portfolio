@@ -143,45 +143,96 @@ export default function CoachingPage() {
         <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-indigo-500/5 blur-3xl" />
 
         <div className="relative mx-auto max-w-[90rem] px-4 pt-16 sm:px-6 sm:pt-20 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-violet-400">
-            <Star className="h-3.5 w-3.5" />
-            6-Week Programme · 5 Spots per Cohort · UK-Based
-          </div>
+          <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
 
-          <h1 className="mt-8 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-            Six weeks to go from confused by tech to working in it.
-          </h1>
+            {/* Left — copy */}
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-violet-400">
+                <Star className="h-3.5 w-3.5" />
+                6-Week Programme · 5 Spots per Cohort · UK-Based
+              </div>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300 sm:text-xl">
-            A small, live programme for career switchers and non-technical
-            professionals who want to break into Product, QA, or BA roles.
-            No fluff. No pre-recorded videos. Just clear, practical guidance
-            from someone who has been doing this work for 15 years.
-          </p>
+              <h1 className="mt-8 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+                Six weeks to go from confused by tech to working in it.
+              </h1>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
-            >
-              Apply for Next Cohort
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <CalendlyButton label="Book a Free Intro Call" />
-          </div>
+              <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
+                A small, live programme for career switchers and non-technical
+                professionals who want to break into Product, QA, or BA roles.
+                No fluff. No pre-recorded videos. Just clear, practical guidance
+                from someone who has been doing this work for 15 years.
+              </p>
 
-          {/* Testimonial pull quote */}
-          <div className="mt-14 max-w-2xl rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
-            <p className="text-base leading-8 text-gray-300 sm:text-lg">
-              &ldquo;Collins helped me reframe my career completely. Within
-              three months I moved from a QA role I had outgrown into a
-              product position I had been aiming for. The clarity and
-              direction he brought was genuinely different from anything I
-              had before.&rdquo;
-            </p>
-            <p className="mt-4 text-sm font-semibold text-violet-400">
-              · Mentee, QA to Product transition
-            </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+                >
+                  Apply for Next Cohort
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <CalendlyButton label="Book a Free Intro Call" />
+              </div>
+
+              {/* Testimonial pull quote */}
+              <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
+                <div className="flex">
+                  <div className="w-1 shrink-0 bg-violet-500" />
+                  <div className="bg-white/5 p-6 sm:p-8">
+                    <p className="text-base leading-8 text-gray-300 sm:text-lg">
+                      &ldquo;Collins helped me reframe my career completely.
+                      Within three months I moved from a QA role I had
+                      outgrown into a product position I had been aiming for.
+                      The clarity and direction he brought was genuinely
+                      different from anything I had before.&rdquo;
+                    </p>
+                    <p className="mt-4 text-sm font-semibold text-violet-400">
+                      · Mentee, QA to Product transition
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right — programme snapshot */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 lg:sticky lg:top-28">
+              <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">
+                Programme at a Glance
+              </p>
+
+              <div className="mt-6 divide-y divide-white/10">
+                {[
+                  { label: "Duration", value: "6 weeks" },
+                  { label: "Format", value: "Live, 2 hrs per week" },
+                  { label: "Cohort size", value: "Max 5 people" },
+                  { label: "Support", value: "WhatsApp or Slack" },
+                  { label: "Recordings", value: "Every session" },
+                  { label: "Bonus", value: "CV review or career call" },
+                  { label: "Founding rate", value: "From £300" },
+                ].map(({ label, value }) => (
+                  <div
+                    key={label}
+                    className="flex items-center justify-between py-3.5"
+                  >
+                    <p className="text-sm text-gray-400">{label}</p>
+                    <p className="text-sm font-semibold text-white">{value}</p>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/contact"
+                className="mt-8 flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+              >
+                Apply for Next Cohort
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+
+              <p className="mt-4 text-center text-xs text-gray-500">
+                Free 20-min intro call before you commit
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
