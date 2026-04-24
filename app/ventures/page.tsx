@@ -117,8 +117,8 @@ export default function VenturesPage() {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
             Alongside my consulting and advisory work, I&apos;m building a set of
             ventures at the intersection of AI, mental health, governance, and
-            product exploration. Each one is real, in progress, and designed to
-            solve something that matters.
+            product exploration. Each one is real, in progress, and solving
+            something that matters.
           </p>
         </div>
       </section>

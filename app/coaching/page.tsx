@@ -542,7 +542,7 @@ export default function CoachingPage() {
                 <div key={item.label} className="flex items-center gap-3">
                   <CheckCircle2 className="h-4 w-4 shrink-0 text-violet-600" />
                   <span className="text-sm text-gray-700">
-                    {item.label} — {item.detail}
+                    {item.label}: {item.detail}
                   </span>
                 </div>
               ))}

@@ -175,7 +175,7 @@ export default function MentorshipPage() {
             Mentorship Areas
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg">
-            Here to help you think more clearly, position yourself better,
+            These sessions help you think more clearly, position yourself better,
             and make more confident moves in your career.
           </p>
         </div>
