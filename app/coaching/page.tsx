@@ -18,11 +18,11 @@ import {
 export const metadata: Metadata = {
   title: "Coaching & Programmes | Collins Obasuyi",
   description:
-    "A 6-week guided programme to help career switchers, graduates, and non-technical professionals break into Product, QA, or BA roles with confidence. Limited to 5 people per cohort.",
+    "A 6-week live programme for career switchers and non-technical professionals who want to understand how tech works and take their first real step into the industry.",
   openGraph: {
     title: "Coaching & Programmes | Collins Obasuyi",
     description:
-      "Break into tech with confidence. A practical 6-week programme for career switchers and non-technical professionals moving into Product, QA, or BA roles.",
+      "The foundation programme for non-technical professionals who want to understand how tech works — before choosing a specific path in Product, QA, or BA.",
     url: "https://collinsobasuyi.com/coaching",
   },
   alternates: { canonical: "https://collinsobasuyi.com/coaching" },
@@ -75,11 +75,9 @@ const weeks = [
 
 const included = [
   { label: "6 live sessions", detail: "2 hours each, every week" },
-  { label: "Session recordings", detail: "So you never fall behind" },
   { label: "Weekly feedback", detail: "On your actual work, every week" },
   { label: "Private support channel", detail: "WhatsApp or Slack throughout" },
   { label: "Programme materials", detail: "Everything you need, kept forever" },
-  { label: "Bonus session", detail: "CV review or career direction call" },
 ];
 
 const outcomes = [
@@ -118,7 +116,7 @@ const faqs = [
   },
   {
     q: "What if I miss a session?",
-    a: "Sessions are recorded so you will not fall behind. You also have access to the support channel throughout, so questions never pile up between sessions.",
+    a: "You have access to the support channel throughout, so questions never pile up between sessions. Anything you missed gets picked up at the start of the next session.",
   },
   {
     q: "Do I need any technical background?",
@@ -130,7 +128,7 @@ const faqs = [
   },
   {
     q: "What happens after the 6 weeks?",
-    a: "You will have a clear direction, the tools to keep moving, and a bonus CV review or career direction session included. I also stay in touch with people who want to keep going.",
+    a: "You will have a clear direction and the tools to keep moving. I also stay in touch with people who want to keep going after the programme ends.",
   },
 ];
 
@@ -157,10 +155,11 @@ export default function CoachingPage() {
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
-                A small, live programme for career switchers and non-technical
-                professionals who want to break into Product, QA, or BA roles.
-                No fluff. No pre-recorded videos. Just clear, practical guidance
-                from someone who has been doing this work for 15 years.
+                The foundation programme for career switchers and non-technical
+                professionals who want to understand how tech actually works and
+                where they fit in it. No fluff. No pre-recorded videos. Just
+                clear, practical guidance from someone who has been doing this
+                work for 15 years.
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -206,8 +205,7 @@ export default function CoachingPage() {
                   { label: "Format", value: "Live, 2 hrs per week" },
                   { label: "Cohort size", value: "Max 5 people" },
                   { label: "Support", value: "WhatsApp or Slack" },
-                  { label: "Recordings", value: "Every session" },
-                  { label: "Bonus", value: "CV review or career call" },
+                  { label: "Materials", value: "Kept forever" },
                   { label: "Founding rate", value: "From £300" },
                 ].map(({ label, value }) => (
                   <div
@@ -274,9 +272,10 @@ export default function CoachingPage() {
                 how to show up in a way that gets noticed.
               </p>
               <p>
-                This programme closes that gap. It is for career switchers,
-                graduates, and professionals in non-technical roles who are
-                serious about making the move into Product, QA, or BA.
+                This programme closes that gap. It is the starting point for
+                career switchers, graduates, and professionals in non-technical
+                roles who want to understand how tech really works before
+                deciding which path to take.
               </p>
             </div>
           </div>
@@ -479,6 +478,10 @@ export default function CoachingPage() {
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                 Three clear paths forward.
               </h2>
+              <p className="mt-4 text-base leading-8 text-gray-600 sm:text-lg">
+                Each has its own dedicated programme. This course gives you the
+                foundation to choose the right one.
+              </p>
               <div className="mt-8 space-y-4">
                 {pathways.map((p) => (
                   <div
