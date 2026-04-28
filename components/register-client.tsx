@@ -11,6 +11,35 @@ const backgroundOptions = [
   "Just curious",
 ];
 
+const roleOptions = [
+  "Product Manager",
+  "Business Analyst",
+  "QA Engineer",
+  "Not sure yet",
+];
+
+const challengeOptions = [
+  "Don't know where to start",
+  "Confused about the different roles",
+  "Keep applying but getting no responses",
+  "Not sure if tech is right for me",
+];
+
+const sourceOptions = [
+  "LinkedIn",
+  "Word of mouth",
+  "Google",
+  "Instagram",
+  "Other",
+];
+
+const workingOptions = [
+  "Yes, in a non-tech role",
+  "Yes, in tech already",
+  "No, looking for work",
+  "Student",
+];
+
 type FormStatus = null | "submitting" | "success" | "error";
 
 export default function RegisterClient() {
@@ -28,12 +57,17 @@ export default function RegisterClient() {
     const name = (formData.get("name") as string).trim();
     const email = (formData.get("email") as string).trim();
     const background = formData.get("background") as string;
+    const role = formData.get("role") as string;
+    const challenge = formData.get("challenge") as string;
+    const source = formData.get("source") as string;
+    const working = formData.get("working") as string;
+    const goal = (formData.get("goal") as string).trim();
 
     try {
       const res = await fetch("/api/coaching-register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, background }),
+        body: JSON.stringify({ name, email, background, role, challenge, source, working, goal }),
       });
       const data = await res.json();
       if (data.success) {
@@ -212,6 +246,123 @@ export default function RegisterClient() {
                         </option>
                       ))}
                     </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="role"
+                      className="mb-1.5 block text-sm font-semibold text-gray-700"
+                    >
+                      What role are you aiming for?
+                    </label>
+                    <select
+                      id="role"
+                      name="role"
+                      required
+                      defaultValue=""
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+                    >
+                      <option value="" disabled>
+                        Select a role
+                      </option>
+                      {roleOptions.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="challenge"
+                      className="mb-1.5 block text-sm font-semibold text-gray-700"
+                    >
+                      What is your biggest challenge right now?
+                    </label>
+                    <select
+                      id="challenge"
+                      name="challenge"
+                      required
+                      defaultValue=""
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+                    >
+                      <option value="" disabled>
+                        Select your biggest challenge
+                      </option>
+                      {challengeOptions.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="source"
+                      className="mb-1.5 block text-sm font-semibold text-gray-700"
+                    >
+                      How did you hear about this?
+                    </label>
+                    <select
+                      id="source"
+                      name="source"
+                      required
+                      defaultValue=""
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+                    >
+                      <option value="" disabled>
+                        Select a source
+                      </option>
+                      {sourceOptions.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="working"
+                      className="mb-1.5 block text-sm font-semibold text-gray-700"
+                    >
+                      Are you currently working?
+                    </label>
+                    <select
+                      id="working"
+                      name="working"
+                      required
+                      defaultValue=""
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+                    >
+                      <option value="" disabled>
+                        Select your situation
+                      </option>
+                      {workingOptions.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="goal"
+                      className="mb-1.5 block text-sm font-semibold text-gray-700"
+                    >
+                      What do you want to get out of Saturday&apos;s session?{" "}
+                      <span className="font-normal text-gray-400">(optional)</span>
+                    </label>
+                    <textarea
+                      id="goal"
+                      name="goal"
+                      rows={3}
+                      placeholder="Tell Collins briefly..."
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
+                    />
                   </div>
 
                   {formStatus === "error" && (

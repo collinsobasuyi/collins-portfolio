@@ -5,13 +5,27 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name = "", email = "", background = "" } = body as {
+    const {
+      name = "",
+      email = "",
+      background = "",
+      role = "",
+      challenge = "",
+      source = "",
+      working = "",
+      goal = "",
+    } = body as {
       name: string;
       email: string;
       background: string;
+      role: string;
+      challenge: string;
+      source: string;
+      working: string;
+      goal: string;
     };
 
-    if (!name || !email || !background) {
+    if (!name || !email || !background || !role || !challenge || !source || !working) {
       return Response.json(
         { success: false, error: "Missing required fields." },
         { status: 400 }
@@ -30,6 +44,11 @@ export async function POST(req: Request) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Background:</strong> ${background}</p>
+        <p><strong>Role aiming for:</strong> ${role}</p>
+        <p><strong>Biggest challenge:</strong> ${challenge}</p>
+        <p><strong>How they heard about this:</strong> ${source}</p>
+        <p><strong>Currently working:</strong> ${working}</p>
+        <p><strong>What they want from the session:</strong> ${goal || "Not provided"}</p>
         <p><strong>Registered at:</strong> ${new Date().toUTCString()}</p>
       `,
     });
@@ -48,8 +67,7 @@ export async function POST(req: Request) {
         <h3>Session details</h3>
         <ul>
           <li><strong>When:</strong> Every Saturday, 3:00pm – 5:00pm UK time</li>
-          <li><strong>Format:</strong> Live, open Q&amp;A via Google Meet</li>
-          <li><strong>Format:</strong> Live Q&amp;A, open questions</li>
+          <li><strong>Format:</strong> Live Q&amp;A via Google Meet</li>
         </ul>
 
         <p>The link above works every Saturday — save it and join any week you like.</p>
