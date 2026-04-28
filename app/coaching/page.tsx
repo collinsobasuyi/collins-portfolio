@@ -235,6 +235,31 @@ export default function CoachingPage() {
         </div>
       </section>
 
+      {/* Saturday Sessions announcement strip */}
+      <section className="bg-violet-700">
+        <div className="mx-auto max-w-[90rem] px-4 py-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-violet-300" />
+              <div>
+                <span className="text-sm font-bold text-white">
+                  Free Saturday Sessions &mdash; Every week, 3&ndash;5pm via Google Meet
+                </span>
+                <span className="ml-2 text-sm text-violet-200">
+                  Join live. Ask anything. No cost.
+                </span>
+              </div>
+            </div>
+            <Link
+              href="/coaching/register"
+              className="shrink-0 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-violet-700 transition hover:bg-violet-50"
+            >
+              Register Free &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Programme facts strip */}
       <section className="border-b border-gray-100 bg-white py-6">
         <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
