@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CalendlyButton from "@/components/calendly-button";
 import {
   CheckCircle2,
   Zap,
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Coaching & Programmes | Collins Obasuyi",
     description:
-      "The foundation programme for non-technical professionals who want to understand how tech works — before choosing a specific path in Product, QA, or BA.",
+      "The foundation programme for non-technical professionals who want to understand how tech works, before choosing a specific path in Product, QA, or BA.",
     url: "https://collinsobasuyi.com/coaching",
   },
   alternates: { canonical: "https://collinsobasuyi.com/coaching" },
@@ -157,20 +156,19 @@ export default function CoachingPage() {
               <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
                 The foundation programme for career switchers and non-technical
                 professionals who want to understand how tech actually works and
-                where they fit in it. No fluff. No pre-recorded videos. Just
-                clear, practical guidance from someone who has been doing this
-                work for 15 years.
+                where they fit in it. No pre-recorded videos, no jargon. Just
+                clear, practical guidance from someone who has done this work
+                for 15 years.
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                 <Link
-                  href="/contact"
+                  href="/coaching/register"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
                 >
                   Apply for Next Cohort
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                <CalendlyButton label="Book a Free Intro Call" />
               </div>
 
               {/* Testimonial pull quote */}
@@ -219,7 +217,7 @@ export default function CoachingPage() {
               </div>
 
               <Link
-                href="/contact"
+                href="/coaching/register"
                 className="mt-8 flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-violet-700"
               >
                 Apply for Next Cohort
@@ -227,7 +225,7 @@ export default function CoachingPage() {
               </Link>
 
               <p className="mt-4 text-center text-xs text-gray-500">
-                Free 20-min intro call before you commit
+                Start with a free Saturday session
               </p>
             </div>
 
@@ -243,10 +241,10 @@ export default function CoachingPage() {
               <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-violet-300" />
               <div>
                 <span className="text-sm font-bold text-white">
-                  Free Saturday Sessions &mdash; Every week, 3&ndash;5pm via Google Meet
+                  Free Saturday sessions, every week, 3&ndash;5pm on Google Meet.
                 </span>
                 <span className="ml-2 text-sm text-violet-200">
-                  Join live. Ask anything. No cost.
+                  Turn up, ask questions, leave with clarity.
                 </span>
               </div>
             </div>
@@ -254,7 +252,7 @@ export default function CoachingPage() {
               href="/coaching/register"
               className="shrink-0 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-violet-700 transition hover:bg-violet-50"
             >
-              Register Free &rarr;
+              Apply for Next Cohort &rarr;
             </Link>
           </div>
         </div>
@@ -452,7 +450,13 @@ export default function CoachingPage() {
               attention, real feedback, and real progress.
             </p>
             <div className="mt-8">
-              <CalendlyButton label="Book a Free Intro Call" />
+              <Link
+                href="/coaching/register"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700"
+              >
+                Apply for Next Cohort
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
 
@@ -577,10 +581,10 @@ export default function CoachingPage() {
             </div>
 
             <Link
-              href="/contact"
+              href="/coaching/register"
               className="mt-8 flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700"
             >
-              Apply Now
+              Apply for Next Cohort
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -600,10 +604,10 @@ export default function CoachingPage() {
                 The same 6 weeks with the same results.
               </p>
               <Link
-                href="/contact"
+                href="/coaching/register"
                 className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-gray-50 px-8 py-4 text-base font-medium text-gray-700 transition hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
               >
-                Apply Now
+                Apply for Next Cohort
               </Link>
             </div>
 
@@ -672,22 +676,17 @@ export default function CoachingPage() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
-              Start with a free 20-minute intro call. We will talk through
-              where you are, what you are trying to do, and whether this
-              programme is the right fit.
-            </p>
-
-            <p className="mt-3 text-sm text-gray-500">
-              No commitment. No hard sell. Just an honest conversation.
+              Start with a free Saturday session. Turn up, ask questions, and
+              see if this is the right fit before committing to anything.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <CalendlyButton label="Book a Free Intro Call" />
               <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
+                href="/coaching/register"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950"
               >
-                Apply Directly
+                Apply for Next Cohort
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -701,7 +700,7 @@ export default function CoachingPage() {
           <p className="text-xs text-gray-400">5 spots · From £300</p>
         </div>
         <Link
-          href="/contact"
+          href="/coaching/register"
           className="shrink-0 rounded-xl bg-violet-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-violet-700"
         >
           Apply Now
