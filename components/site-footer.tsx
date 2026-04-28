@@ -200,7 +200,7 @@ export default function SiteFooter() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-gray-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Collins Obasuyi. Built with purpose.
+            © {new Date().getFullYear()} Collins Obasuyi.
           </p>
           <p className="text-sm text-gray-500">
             Open to collaboration, product opportunities, and meaningful work.

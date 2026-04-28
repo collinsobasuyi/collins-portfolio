@@ -111,14 +111,14 @@ export default function VenturesPage() {
           </div>
 
           <h1 className="mt-6 max-w-5xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-            Products and ventures built with intention, not just ambition.
+            Three AI ventures at different stages of development.
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
             Alongside my consulting and advisory work, I&apos;m building a set of
             ventures at the intersection of AI, mental health, governance, and
-            product exploration. Each one is real, in progress, and solving
-            something that matters.
+            product exploration. Each one is real, in progress, and aimed at a
+            genuine problem.
           </p>
         </div>
       </section>

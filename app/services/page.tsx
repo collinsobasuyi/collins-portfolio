@@ -170,8 +170,8 @@ export default function ServicesPage() {
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
                 I work with companies, startups, and teams that need more than a
                 generic consultant. My background spans product management,
-                delivery leadership, and quality engineering, giving you a
-                senior partner who understands strategy and execution equally.
+                delivery leadership, and quality engineering. That means I
+                understand both strategy and execution.
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">

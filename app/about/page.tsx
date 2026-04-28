@@ -447,16 +447,14 @@ export default function AboutPage() {
             </div>
 
             <h2 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl">
-              Building products, refining ideas, and creating more clarity
-              where AI, product, and execution meet.
+              AI products, venture building, and career mentorship. That is the current work.
             </h2>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-gray-400 sm:text-lg">
               Right now, I&apos;m focused on building ventures like UBUNCARE and
               RiskPilot AI, shaping YSLR Labs as a practical product studio,
               and supporting people who want stronger direction in their
-              careers, projects, and next steps. I&apos;m drawn to work that
-              combines ambition with substance.
+              careers, projects, and next steps.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">

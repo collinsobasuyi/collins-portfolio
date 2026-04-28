@@ -116,7 +116,7 @@ export default function MentorshipPage() {
               </div>
 
               <h1 className="mt-6 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-                Helping ambitious professionals grow with more clarity,
+                Career mentorship for ambitious professionals in tech. Clarity,
                 confidence, and direction.
               </h1>
 
