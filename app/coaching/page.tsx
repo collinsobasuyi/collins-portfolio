@@ -225,7 +225,7 @@ export default function CoachingPage() {
               </Link>
 
               <p className="mt-4 text-center text-xs text-gray-500">
-                Start with a free Saturday session
+                Start with a Saturday session
               </p>
             </div>
 
@@ -241,7 +241,7 @@ export default function CoachingPage() {
               <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-violet-300" />
               <div>
                 <span className="text-sm font-bold text-white">
-                  Free Saturday sessions, every week, 3&ndash;5pm on Google Meet.
+                  Saturday sessions, every week, 3&ndash;5pm on Google Meet.
                 </span>
                 <span className="ml-2 text-sm text-violet-200">
                   Turn up, ask questions, leave with clarity.
@@ -676,7 +676,7 @@ export default function CoachingPage() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-gray-400 sm:text-lg">
-              Start with a free Saturday session. Turn up, ask questions, and
+              Start with a Saturday session. Turn up, ask questions, and
               see if this is the right fit before committing to anything.
             </p>
 

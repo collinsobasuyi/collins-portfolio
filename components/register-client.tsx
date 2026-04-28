@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowLeft, Calendar, Video, Link2, Banknote } from "lucide-react";
+import { CheckCircle2, ArrowLeft, Calendar, Video, Link2 } from "lucide-react";
 
 const backgroundOptions = [
   "Non-tech career",
@@ -61,12 +61,11 @@ export default function RegisterClient() {
             </span>
           </div>
           <h1 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
-            Free Saturday Tech Sessions
+            Saturday Tech Sessions
           </h1>
           <p className="mt-4 max-w-xl text-base leading-8 text-gray-400 sm:text-lg">
-            A free, live 2-hour Google Meet every Saturday. Ask questions, get
-            clarity, and understand how tech teams actually work. No sign-up
-            fee. Just show up.
+            A live 2-hour Google Meet every Saturday. Ask questions, get
+            clarity, and understand how tech teams actually work.
           </p>
         </div>
       </section>
@@ -96,11 +95,6 @@ export default function RegisterClient() {
                   icon: Link2,
                   title: "Meet link sent instantly",
                   detail: "Register once, join any Saturday you like.",
-                },
-                {
-                  icon: Banknote,
-                  title: "Completely free",
-                  detail: "No cost, no catch.",
                 },
               ].map(({ icon: Icon, title, detail }) => (
                 <div key={title} className="flex items-start gap-4">
