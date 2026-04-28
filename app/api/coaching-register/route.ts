@@ -1,6 +1,15 @@
 import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+const gmailTransport = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 export async function POST(req: Request) {
   try {
@@ -34,6 +43,7 @@ export async function POST(req: Request) {
 
     const meetLink = process.env.GOOGLE_MEET_LINK ?? "";
 
+    // Notification to Collins via Resend
     await resend.emails.send({
       from: "Collins Portfolio <onboarding@resend.dev>",
       to: ["collins.product.ai@gmail.com"],
@@ -53,9 +63,10 @@ export async function POST(req: Request) {
       `,
     });
 
-    await resend.emails.send({
-      from: "Collins Portfolio <onboarding@resend.dev>",
-      to: [email],
+    // Confirmation to registrant via Gmail
+    await gmailTransport.sendMail({
+      from: `Collins Obasuyi <${process.env.GMAIL_USER}>`,
+      to: email,
       subject: "You're registered — Saturday Sessions with Collins",
       html: `
         <h2>You're in, ${name}.</h2>
@@ -67,7 +78,7 @@ export async function POST(req: Request) {
         <h3>Session details</h3>
         <ul>
           <li><strong>When:</strong> Every Saturday, 3:00pm – 5:00pm UK time</li>
-          <li><strong>Format:</strong> Live Q&amp;A via Google Meet</li>
+          <li><strong>Format:</strong> Live Q&A via Google Meet</li>
         </ul>
 
         <p>The link above works every Saturday — save it and join any week you like.</p>
