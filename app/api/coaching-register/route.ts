@@ -36,7 +36,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Collins Portfolio <onboarding@resend.dev>",
-      to: ["collins2020job@gmail.com"],
+      to: ["collins.product.ai@gmail.com"],
       subject: `New Saturday Session Registration: ${name}`,
       replyTo: email,
       html: `

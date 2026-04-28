@@ -367,7 +367,7 @@ export default function RegisterClient() {
 
                   {formStatus === "error" && (
                     <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
-                      {errorMessage || "Something went wrong — please try again or email collins2020job@gmail.com directly."}
+                      {errorMessage || "Something went wrong — please try again or email collins.product.ai@gmail.com directly."}
                     </p>
                   )}
 
