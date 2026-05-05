@@ -376,7 +376,7 @@ export default function RegisterClient() {
                     disabled={formStatus === "submitting"}
                     className="mt-2 flex w-full items-center justify-center rounded-2xl bg-violet-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-violet-700 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
                   >
-                    {formStatus === "submitting" ? "Reserving…" : "Reserve My Spot →"}
+                    {formStatus === "submitting" ? "Reserving…" : "Reserve My Spot"}
                   </button>
 
                   <p className="text-center text-xs text-gray-400">
